@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Garvan.Web</title>
+    <title>@ViewData["Title"] - Garvan</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,13 +26,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">Garvan.Web</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                <ul class="nav navbar-nav" style="text-align:center;">
+                    <li><a asp-page="/Index">Shop</a></li>
+                    <li><a asp-page="/About">About us</a></li>
+                    <li><a asp-page="/Index">Garvan</a></li>
+                    <li><a asp-page="/Contact">Story</a></li>
+                    <li><a asp-page="/Contact">Contacts</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +42,51 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - Garvan.Web</p>
+            <div style="margin-left:auto;margin-right:auto; width:50%;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Navigate</h3>
+                        <ul>
+                            <li><a asp-page="/Index">Home</a></li>
+                            <li><a asp-page="/Shop">Shop</a></li>
+                            <li><a asp-page="/Shop">Story</a></li>
+                            <li><a asp-page="/Contact">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>About the site</h3>
+                        <ul>
+                            <li><a asp-page="/Index">Terms and conditions</a></li>
+                            <li><a asp-page="/Index">Privacy policy</a></li>
+                            <li><a asp-page="/Index">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Call us</h3>
+                        <ul>
+                            <li><a asp-page="/Index">+359 88 9 123 456</a></li>
+                        </ul>
+                        <h3>Follow us</h3>
+                        <ul>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Fb
+                                </div>
+                                <div class="col-md-4">
+                                    Tw
+                                </div>
+                                <div class="col-md-4">
+                                    In
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <p style="margin-left: auto; margin-right: auto; width: 10%;">&copy; 2017 - Garvan</p>
+                </div>
+            </div>
         </footer>
     </div>
 

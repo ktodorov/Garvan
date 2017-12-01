@@ -6,8 +6,9 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Carousel */
@@ -33,3 +34,32 @@ body {
         display: none;
     }
 }
+
+footer {
+    background: #222 !important;
+    color: #eee;
+}
+
+    footer hr {
+        background: white;
+        color: #eee;
+    }
+
+    footer ul {
+        list-style-type: none;
+        padding-left: 5px;
+    }
+
+    footer li {
+        color: #eee;
+        padding: 3px 0;
+    }
+
+        footer li a, footer li a:active, footer li a:visited, footer li a:hover {
+            color: #eee;
+            text-decoration: none;
+        }
+
+            footer li a:hover {
+                color: gray;
+            }
