@@ -1,6 +1,25 @@
-﻿Our distributors:
-
-
+﻿<div id="distributors-div" class="partial-div">
+    <h3>
+        @Resources.OurDistributors:
+    </h3>
+    <div id="distributors-wrapper">
+        <div class="col-md-4 distributor-logo-div">
+            <a href="https://www.overclockers.co.uk/">
+                <img src="~/images/logos/overclockers.png" />
+            </a>
+        </div>
+        <div class="col-md-4 distributor-logo-div">
+            <a href="https://ozone.bg/">
+                <img src="~/images/logos/ozone.png" />
+                </a>
+        </div>
+        <div class="col-md-4 distributor-logo-div">
+            <a href="http://ign.com/">
+                <img src="~/images/logos/ign.png" />
+            </a>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

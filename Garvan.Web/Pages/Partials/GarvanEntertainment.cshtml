@@ -1,0 +1,23 @@
+﻿@page
+@model Garvan.Web.Pages.Partials.GarvanEntertainmentModel
+
+<div id="garvan-entertainment-div" class="partial-div partial-info-div ">
+    <div id="garvan-entertainment-text" class="col-md-6">
+        <div>
+            <h2>@Resources.GarvanEntertainment</h2>
+            <p>
+                @Resources.GamingCaseDesksAndAccessories.<br />
+                @Html.Raw(Resources.ItsYourWorld).
+            </p>
+
+            <button>Shop now</button>
+        </div>
+    </div>
+    <div id="garvan-entertainment-img" class="col-md-6">
+
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

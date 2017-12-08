@@ -4,6 +4,12 @@
     ViewData["Title"] = "Home page";
 }
 
+@{await Html.RenderPartialAsync("Partials/GarvanEntertainment", new Garvan.Web.Pages.Partials.GarvanEntertainmentModel());}
+
+@{await Html.RenderPartialAsync("Partials/CableMonster");}
+
+@{await Html.RenderPartialAsync("Partials/Specifications");}
+
 @{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
 
 @{await Html.RenderPartialAsync("Partials/Distributors");}

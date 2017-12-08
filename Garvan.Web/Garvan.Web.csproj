@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Garvan.Data.Interfaces\Garvan.Data.Interfaces.csproj" />
     <ProjectReference Include="..\Garvan.Data.Services\Garvan.Data.Services.csproj" />
     <ProjectReference Include="..\Garvan.Entities\Garvan.Entities.csproj" />
+    <ProjectReference Include="..\Garvan.Resources\Garvan.Resources.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

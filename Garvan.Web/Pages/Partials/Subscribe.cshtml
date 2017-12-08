@@ -1,7 +1,20 @@
 ﻿@page
 @model Garvan.Web.Pages.Partials.SubscribePartialModel
 
-<p>Subscribe to our newsletter</p>
+
+<div id="subscribe-div" class="partial-div">
+    <h3>
+        @Resources.SubscribeToOurNewsletter:
+    </h3>
+    <h4>
+        @Resources.AndDontMissCoolNewProductsAndSpecialOffers!
+    </h4>
+    <div class="subscribe-input-wrapper">
+        <input type="text" placeholder="Enter your e-mail address..." />
+        <button>Subscribe</button>
+    </div>
+</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

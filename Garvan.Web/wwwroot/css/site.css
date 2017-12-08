@@ -35,6 +35,31 @@ body {
     }
 }
 
+button {
+    background: black;
+    border: 1px solid #222;
+    color: white;
+    text-transform: uppercase;
+    /*padding: 7px 15px;*/
+    height: 35px;
+    min-width: 120px;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+    button:hover {
+        background: #222;
+        cursor: pointer;
+    }
+
+
+input {
+    border: 0px;
+    height: 35px;
+    min-width: 300px;
+    padding: 0 15px;
+}
+
 footer {
     background: #222 !important;
     color: #eee;
@@ -63,3 +88,166 @@ footer {
             footer li a:hover {
                 color: gray;
             }
+
+/* Headers */
+h4.sub-header {
+    color: #50A273;
+}
+
+a.inside-link {
+    color: #007253;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+    a.inside-link:visited {
+        color: #007253;
+        text-decoration: underline;
+    }
+
+div.partial-div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /*background: #eee;*/
+}
+
+    div.partial-div h2, div.partial-div h3 {
+        font-weight: bold;
+    }
+
+
+#garvan-entertainment-div {
+}
+
+    #garvan-entertainment-div div, #garvan-entertainment-div p, #garvan-entertainment-div h2 {
+        padding: 5px;
+    }
+
+    #garvan-entertainment-div #garvan-entertainment-text > div {
+        float: right;
+        text-align: left;
+    }
+
+    #garvan-entertainment-div #garvan-entertainment-text h2 {
+        margin-bottom: 0px;
+    }
+
+    #garvan-entertainment-div #garvan-entertainment-text p {
+        margin-bottom: 20px;
+    }
+
+    #garvan-entertainment-div #garvan-entertainment-img {
+        float: left;
+    }
+
+#cable-monster-div, #specifications-div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+    #cable-monster-div .img-container, #specifications-div .img-container {
+        display: table-cell;
+        height: 100%;
+        background: gray;
+    }
+
+    #cable-monster-div .text-container, #specifications-div .text-container {
+        display: table-cell;
+        background: white;
+        height: 100%;
+    }
+
+    #cable-monster-div .text-container {
+        padding: 0 40px;
+    }
+
+        #cable-monster-div .text-container p {
+            padding: 10px 0;
+        }
+
+
+    #specifications-div .text-container {
+        padding-right: 40px;
+    }
+
+        #specifications-div .text-container table {
+            margin-top: 35px;
+        }
+
+            #specifications-div .text-container table th {
+                text-align: right;
+                vertical-align: top;
+                padding-right: 15px;
+                font-weight: bold;
+                width: 50%;
+            }
+
+            #specifications-div .text-container table td {
+                text-align: left;
+                vertical-align: top;
+                padding-bottom: 10px;
+            }
+
+
+        #specifications-div .text-container .more-details-wrapper {
+            padding: 10px 0;
+            text-align: right;
+        }
+
+#subscribe-div {
+    background: #007253;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+    #subscribe-div h3 {
+        margin-top: 0px;
+    }
+
+    #subscribe-div .subscribe-input-wrapper {
+        margin-top: 15px;
+    }
+
+        #subscribe-div .subscribe-input-wrapper input {
+            color: black;
+        }
+
+        #subscribe-div .subscribe-input-wrapper button {
+            margin-left: -2px;
+        }
+
+#distributors-div {
+    text-align: center;
+    padding: 50px 0;
+}
+
+    #distributors-div h3 {
+        margin-bottom:  40px;
+    }
+
+    #distributors-div #distributors-wrapper {
+        height: 200px;
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    #distributors-div #distributors-wrapper .distributor-logo-div {
+        height: 80%;
+        padding: 20px;
+    }
+
+        #distributors-div #distributors-wrapper .distributor-logo-div img {
+            max-height: 50%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
