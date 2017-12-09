@@ -15,6 +15,8 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,54 +42,7 @@
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <div style="margin-left:auto;margin-right:auto; width:50%;">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>Navigate</h3>
-                        <ul>
-                            <li><a asp-page="/Index">@Resources.Home</a></li>
-                            <li><a asp-page="/Shop">@Resources.Shop</a></li>
-                            <li><a asp-page="/Story">@Resources.Story</a></li>
-                            <li><a asp-page="/Contact">@Resources.Contacts</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>About the site</h3>
-                        <ul>
-                            <li><a asp-page="/Index">@Resources.TermsAndConditions</a></li>
-                            <li><a asp-page="/Index">@Resources.PrivacyPolicy</a></li>
-                            <li><a asp-page="/Index">@Resources.FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Call us</h3>
-                        <ul>
-                            <li><a href="tel:0889123456">+359 88 9 123 456</a></li>
-                        </ul>
-                        <h3>Follow us</h3>
-                        <ul>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    Fb
-                                </div>
-                                <div class="col-md-4">
-                                    Tw
-                                </div>
-                                <div class="col-md-4">
-                                    In
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                <hr />
-                <div>
-                    <p style="margin-left: auto; margin-right: auto; width: 10%;">&copy; 2017 - @Resources.Garvan</p>
-                </div>
-            </div>
-        </footer>
+        @{ await Html.RenderPartialAsync("Partials/Footer");}
     </div>
 
     <environment include="Development">

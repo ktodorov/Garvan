@@ -1,6 +1,5 @@
 body {
     padding-top: 50px;
-    padding-bottom: 20px;
 }
 
 /* Wrapping element */
@@ -40,7 +39,6 @@ button {
     border: 1px solid #222;
     color: white;
     text-transform: uppercase;
-    /*padding: 7px 15px;*/
     height: 35px;
     min-width: 120px;
     font-size: 13px;
@@ -60,34 +58,56 @@ input {
     padding: 0 15px;
 }
 
+/* Footer */
+
 footer {
     background: #222 !important;
-    color: #eee;
+    color: #ccc;
 }
 
     footer hr {
-        background: white;
-        color: #eee;
+        border-color: #444;
+        margin: 10px;
     }
 
     footer ul {
         list-style-type: none;
-        padding-left: 5px;
+        padding-left: 0px;
     }
 
     footer li {
-        color: #eee;
-        padding: 3px 0;
+        padding: 5px 0;
+        font-size: 12px;
     }
 
         footer li a, footer li a:active, footer li a:visited, footer li a:hover {
-            color: #eee;
+            color: #ccc;
             text-decoration: none;
         }
 
             footer li a:hover {
                 color: gray;
             }
+
+    footer .footer-wrapper {
+        padding-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    }
+
+    footer .footer-copyrights-wrapper {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    footer .footer-copyrights-wrapper, footer hr {
+        color: #444;
+    }
+
+    footer a.fa {
+        padding: 0 5px;
+    }
 
 /* Headers */
 h4.sub-header {
@@ -160,7 +180,7 @@ div.partial-div {
     }
 
     #cable-monster-div .text-container {
-        padding: 0 40px;
+        padding: 15px 40px;
     }
 
         #cable-monster-div .text-container p {
@@ -172,6 +192,10 @@ div.partial-div {
         padding-right: 40px;
     }
 
+        #specifications-div .text-container h3, #specifications-div .text-container h4 {
+            padding-left: 25px;
+        }
+
         #specifications-div .text-container table {
             margin-top: 35px;
         }
@@ -181,7 +205,7 @@ div.partial-div {
                 vertical-align: top;
                 padding-right: 15px;
                 font-weight: bold;
-                width: 50%;
+                width: 40%;
             }
 
             #specifications-div .text-container table td {
@@ -225,29 +249,30 @@ div.partial-div {
 }
 
     #distributors-div h3 {
-        margin-bottom:  40px;
+        margin-bottom: 40px;
     }
 
     #distributors-div #distributors-wrapper {
-        height: 200px;
+        min-height: 200px;
         margin: 0 auto;
         width: 60%;
     }
 
-    #distributors-div #distributors-wrapper .distributor-logo-div {
-        height: 80%;
-        padding: 20px;
-    }
 
-        #distributors-div #distributors-wrapper .distributor-logo-div img {
-            max-height: 50%;
-            max-width: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+#distributors-div #distributors-wrapper .distributor-logo-div {
+    height: 150px;
+    padding: 20px;
+}
+
+    #distributors-div #distributors-wrapper .distributor-logo-div img {
+        max-height: 50%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
