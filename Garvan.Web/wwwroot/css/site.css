@@ -34,7 +34,43 @@ body {
     }
 }
 
-button {
+/* Navbar */
+.navbar {
+    background: black;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+    .navbar .navbar-nav {
+        background: black;
+    }
+
+        .navbar .navbar-nav li {
+            height: 100%;
+        }
+
+        .navbar .navbar-nav a {
+            vertical-align: middle;
+            text-transform: uppercase;
+            line-height: 25px;
+        }
+
+            .navbar .navbar-nav a.logo-menu {
+                padding: 2px 20px;
+            }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+button.garvan-button {
     background: black;
     border: 1px solid #222;
     color: white;
@@ -45,7 +81,7 @@ button {
     vertical-align: top;
 }
 
-    button:hover {
+    button.garvan-button:hover {
         background: #222;
         cursor: pointer;
     }
@@ -239,7 +275,7 @@ div.partial-div {
             color: black;
         }
 
-        #subscribe-div .subscribe-input-wrapper button {
+        #subscribe-div .subscribe-input-wrapper button.garvan-button {
             margin-left: -2px;
         }
 
@@ -259,20 +295,20 @@ div.partial-div {
     }
 
 
-#distributors-div #distributors-wrapper .distributor-logo-div {
-    height: 150px;
-    padding: 20px;
-}
+        #distributors-div #distributors-wrapper .distributor-logo-div {
+            height: 150px;
+            padding: 20px;
+        }
 
-    #distributors-div #distributors-wrapper .distributor-logo-div img {
-        max-height: 50%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
+            #distributors-div #distributors-wrapper .distributor-logo-div img {
+                max-height: 50%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
