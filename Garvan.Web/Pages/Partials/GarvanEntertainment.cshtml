@@ -2,7 +2,7 @@
 @model Garvan.Web.Pages.Partials.GarvanEntertainmentModel
 
 <div id="garvan-entertainment-div" class="partial-div partial-info-div ">
-    <div id="garvan-entertainment-text" class="col-md-6">
+    <div class="info-text-div col-md-6">
         <div>
             <h2>@Resources.GarvanEntertainment</h2>
             <p>
@@ -10,12 +10,13 @@
                 @Html.Raw(Resources.ItsYourWorld).
             </p>
 
-            <button class="garvan-button">Shop now</button>
+            <button id="garvan-entertainment-shop-button" class="garvan-button">Shop now</button>
         </div>
     </div>
-    <div id="garvan-entertainment-img" class="col-md-6">
-
+    <div class="col-md-6">
+        <img src="~/images/pictures/desk_top_cut.png" />
     </div>
+    <img class="shine-img" src="~/images/pictures/shine.png" />
 </div>
 
 @section Scripts {
