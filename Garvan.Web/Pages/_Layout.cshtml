@@ -31,7 +31,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-center" >
+                <ul class="nav navbar-nav navbar-center">
                     <li><a asp-page="/Index">@Resources.Shop</a></li>
                     <li><a asp-page="/About">@Resources.AboutUs</a></li>
                     <li><a asp-page="/Index" class="logo-menu"><img src="~/images/garvan_logo.png" width="50" /></a></li>
@@ -66,6 +66,8 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     @RenderSection("Scripts", required: false)
 </body>

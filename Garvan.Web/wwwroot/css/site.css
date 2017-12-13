@@ -92,6 +92,7 @@ button.garvan-button {
     height: 35px;
     min-width: 120px;
     font-size: 13px;
+    font-weight: 100;
     vertical-align: top;
 }
 
@@ -101,11 +102,15 @@ button.garvan-button {
     }
 
 
-input {
+input, textarea {
     border: 1px solid #ddd;
     height: 35px;
-    padding: 0 15px;
+    padding: 0 5px;
     width: 100%;
+}
+
+textarea {
+    resize: none;
 }
 
 /* Footer */
@@ -429,8 +434,90 @@ div.partial-div {
             }
 
 /* Contacts */
+
+@media (min-width: 768px) {
+    #contacts-div {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #contacts-div {
+        padding: 0 20px;
+    }
+
+        #contacts-div .separate-control {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+}
+
+@media (min-width: 768px) {
+    #contacts-div .contacts-row {
+        padding: 10px 0;
+    }
+}
+
 #contacts-div {
     float: none;
+    padding-top: 30px;
+}
+
+    #contacts-div h2 {
+        font-weight: bold;
+    }
+
+    #contacts-div button.garvan-button[type=submit] {
+        height: 45px;
+        width: 160px;
+    }
+
+    #contacts-div #contacts-info-div {
+        text-align: center;
+    }
+
+        #contacts-div #contacts-info-div table#contacts-info-links-table {
+            margin: 0 auto;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+            #contacts-div #contacts-info-div table#contacts-info-links-table td {
+                padding: 5px 0;
+            }
+
+        #contacts-div #contacts-info-div .contacts-info-email-a a,
+        #contacts-div #contacts-info-div .contacts-info-email-a a:visited {
+            color: #24a79d;
+        }
+
+        #contacts-div #contacts-info-div .contacts-info-phone-a a,
+        #contacts-div #contacts-info-div .contacts-info-phone-a a:visited {
+            color: black;
+        }
+
+        #contacts-div #contacts-info-div .contacts-info-email-a,
+        #contacts-div #contacts-info-div .contacts-info-phone-a {
+            font-size: 20px;
+        }
+
+
+            #contacts-div #contacts-info-div .contacts-info-email-a i,
+            #contacts-div #contacts-info-div .contacts-info-phone-a i {
+                color: #24a79d;
+                font-size: 30px;
+                vertical-align: bottom;
+                margin-right: 10px;
+            }
+
+    #contacts-div #contacts-bird-img {
+        margin-bottom: -1px;
+    }
+
+#contacts-subscribe-div #subscribe-div {
+    margin-top: 0;
 }
 
 .input-wrapper {
@@ -441,6 +528,10 @@ div.partial-div {
         padding-bottom: 5px;
     }
 
+    .input-wrapper #message-input {
+        height: 200px;
+        width: 100%;
+    }
 
 img.shine-img {
     height: 100% !important;
