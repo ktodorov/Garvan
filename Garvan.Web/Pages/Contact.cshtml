@@ -1,4 +1,8 @@
 ﻿@page
+@{
+    ViewData["Title"] = Resources.Contacts;
+}
+    
 @model ContactModel
 <div id="contacts-div">
     <h2>@Resources.Contacts</h2>
@@ -44,7 +48,7 @@
                 <tr>
                     <td class="contacts-info-email-a">
                         <i class="fa fa-envelope-o"> </i>
-                        <a href="mailto:info@garvanentertainment.com" >
+                        <a href="mailto:info@garvanentertainment.com">
                             info@garvanentertainment.com
                         </a>
                     </td>
@@ -52,7 +56,7 @@
                 <tr>
                     <td class="contacts-info-phone-a">
                         <i class="fa fa-phone"></i>
-                        <a href="tel:+359887321987" >
+                        <a href="tel:+359887321987">
                             +359 88 732 1987
                         </a>
                     </td>
