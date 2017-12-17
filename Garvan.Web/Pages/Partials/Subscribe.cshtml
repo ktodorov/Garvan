@@ -1,5 +1,4 @@
-﻿@page
-@model Garvan.Web.Pages.Partials.SubscribePartialModel
+﻿@model Garvan.Web.Pages.Partials.SubscribePartialModel
 
 
 <div id="subscribe-div" class="partial-div">
@@ -10,11 +9,35 @@
         @Resources.AndDontMissCoolNewProductsAndSpecialOffers!
     </h4>
     <div class="subscribe-input-wrapper">
-        <input type="text" placeholder="Enter your e-mail address..." />
-        <button class="garvan-button">Subscribe</button>
+        <form class="subscribe-register-form">
+            <input type="text" name="subscribe-email" class="email-subscribe-input" placeholder="Enter your e-mail address..." />
+            <button type="submit" class="garvan-button subscribe-button">Subscribe</button>
+        </form>
+    </div>
+
+    <div class="subscribe-error-wrapper hidden">
+        <button class="subscribe-error-close-button"><i class="fa fa-close"></i></button>
+        <div class="subscribe-error-message-wrapper">
+            <i class="fa fa-times-circle-o fa-2x subscribe-error-sign"></i>
+            <div class="subscribe-error-message">Your e-mail is already registered</div>
+        </div>
+    </div>
+
+    <div class="subscribe-info-wrapper hidden">
+        <button class="subscribe-info-close-button"><i class="fa fa-close"></i></button>
+        <div class="subscribe-info-message-wrapper">
+            <i class="fa fa-check-circle-o fa-2x subscribe-error-sign"></i>
+            <div class="subscribe-info-message">
+                Your e-mail was successfully registered.<br/>
+                Stay tuned for more Garvan news.
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-wrapper hidden">
+        <img src="~/images/loading/ajax-loader.gif" />
     </div>
 </div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

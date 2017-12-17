@@ -283,7 +283,6 @@ div.partial-div {
         text-align: center;
     }
 
-
 #cable-monster-div .img-container img,
 #specifications-div .img-container img {
     margin-left: auto;
@@ -366,6 +365,7 @@ div.partial-div {
     }
 
 #subscribe-div {
+    position: relative;
     background: #17a297;
     padding: 20px 0;
     text-align: center;
@@ -562,9 +562,9 @@ div#story-div {
     margin-top: 5px;
 }
 
-    #story-div #current-story-image-wrapper img {
-        height: 320px;
-    }
+#story-div #current-story-image-wrapper img {
+    height: 320px;
+}
 
 #story-div #story-wrapper {
     padding: 35px 0;
@@ -628,3 +628,52 @@ div#story-div {
             font-weight: bold;
             color: #17a297;
         }
+
+
+/* Loading gif */
+.loading-wrapper, .subscribe-error-wrapper,
+.loading-wrapper, .subscribe-info-wrapper {
+    position: absolute;
+    background-color: #FFD2D2;
+    color: #D8000C;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loading-wrapper, .subscribe-info-wrapper {
+    background-color: #17a297;
+    color: #97f2e7;
+}
+
+    .subscribe-error-wrapper .subscribe-error-close-button, .subscribe-info-wrapper .subscribe-info-close-button {
+        background: none;
+        float: right;
+        border: 0;
+        font-size: 20px;
+    }
+
+.subscribe-error-wrapper .subscribe-error-close-button:hover {
+    color: #B8000C;
+}
+
+        .subscribe-info-wrapper .subscribe-info-close-button:hover {
+            color: #a7f2e7;
+        }
+
+.subscribe-error-wrapper .subscribe-error-message-wrapper,
+.subscribe-info-wrapper .subscribe-info-message-wrapper {
+    font-size: 20px;
+    font-weight: lighter;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loading-wrapper img {
+    height: 100%;
+}
+
