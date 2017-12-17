@@ -1,6 +1,6 @@
 ﻿$(document).ready(() => {
 
-    $("#garvan-entertainment-shop-button").click(() => {
+    $("#shop-button").click(() => {
         window.location.href = '/Contact';
     });
 

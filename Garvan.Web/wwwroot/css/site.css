@@ -590,7 +590,7 @@ div#story-div {
     font-size: 20px;
 }
 
-.story-text-wrapper span.capitalized-letter {
+span.capitalized-letter {
     float: left;
     font-family: Georgia;
     font-size: 45px;
@@ -655,25 +655,94 @@ div#story-div {
         font-size: 20px;
     }
 
-.subscribe-error-wrapper .subscribe-error-close-button:hover {
-    color: #B8000C;
-}
+        .subscribe-error-wrapper .subscribe-error-close-button:hover {
+            color: #B8000C;
+        }
 
         .subscribe-info-wrapper .subscribe-info-close-button:hover {
             color: #a7f2e7;
         }
 
-.subscribe-error-wrapper .subscribe-error-message-wrapper,
-.subscribe-info-wrapper .subscribe-info-message-wrapper {
-    font-size: 20px;
-    font-weight: lighter;
-    vertical-align: middle;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    .subscribe-error-wrapper .subscribe-error-message-wrapper,
+    .subscribe-info-wrapper .subscribe-info-message-wrapper {
+        font-size: 20px;
+        font-weight: lighter;
+        vertical-align: middle;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .loading-wrapper img {
+        height: 100%;
+    }
+
+
+/* About us */
+#about-div {
+    background: white;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    min-height: 500px;
+    display: table;
 }
 
-.loading-wrapper img {
-    height: 100%;
+#about-div-wrapper {
+    padding: 30px 0;
 }
 
+    #about-div-wrapper h1 {
+        font-weight: bold;
+    }
+
+    #about-div-wrapper h1,
+    #about-div-wrapper h3 {
+        margin: 0;
+    }
+
+@media (max-width: 768px) {
+    #about-div-wrapper {
+        padding: 50px 15px;
+    }
+
+    #about-div [class*="col-"] {
+        float: left;
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    #about-div #hand-cable-img {
+        display: none;
+    }
+}
+
+    #about-div-wrapper #about-info-wrapper {
+        padding: 0 30px;
+        padding-top: 30px;
+    }
+
+        #about-div-wrapper #about-info-wrapper div {
+            padding-bottom: 30px;
+        }
+
+            #about-div-wrapper #about-info-wrapper div#your-world-wrapper {
+                font-size: 20px;
+            }
+
+    #about-page #subscribe-div {
+        margin-top: 0;
+    }
+
+
+    #about-div #hand-cable-img {
+        position: absolute;
+        bottom: 0;
+        width: 96%;
+    }
+
+    #about-div [class*="col-"] {
+        float: none;
+        display: table-cell;
+    }
