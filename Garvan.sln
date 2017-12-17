@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garvan.Web", "Garvan.Web\Garvan.Web.csproj", "{6CA000AA-9E5D-4CE8-A74C-F60E44C3F8B6}"
 EndProject
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garvan.Database", "Garvan.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garvan.Entities", "Garvan.Entities\Garvan.Entities.csproj", "{DBF58AEC-E6F6-48E8-8551-10E70D3EEE72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garvan.Resources", "Garvan.Resources\Garvan.Resources.csproj", "{BD1154BA-65FD-442F-89FE-DC0D5DE875EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garvan.Resources", "Garvan.Resources\Garvan.Resources.csproj", "{BD1154BA-65FD-442F-89FE-DC0D5DE875EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

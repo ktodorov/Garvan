@@ -4,5 +4,49 @@
     ViewData["Title"] = "Story";
 }
 
-<h2>@Resources.Story</h2>
+<div id="story-div">
+    <div id="story-wrapper" class="row">
+        <div id="current-story-wrapper" class="col-md-6">
+            <h2>@Resources.Story</h2>
+            <div id="prelude">
+                @{Html.RenderPartial("Partials/Chapter", model: Model.Prelude);}
+            </div>
+        </div>
+        <div id="current-story-image-wrapper" class="col-md-6">
+            <table class="table-wrapper">
+                <tr>
+                    <td>
+                        <img src="~/images/pictures/moon.png" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="chapters-outer-wrapper">
+        <div id="chapters-inner-wrapper" class="row">
+            <div class="col-md-6">
+                <div id="@Model.Prelude.NextChapterDiv" class="chapter-div">
+                    @{Html.RenderPartial("Partials/Chapter", model: Model.FirstChapter);}
+                </div>
+                <hr />
+                <div id="@Model.FirstChapter.NextChapterDiv" class="chapter-div">
+                    @{Html.RenderPartial("Partials/Chapter", model: Model.SecondChapter);}
+                </div>
+                <hr />
+                <div id="@Model.SecondChapter.NextChapterDiv" class="chapter-div">
+                    @{Html.RenderPartial("Partials/Chapter", model: Model.ThirdChapter);}
+                </div>
 
+                <button id="garvan-entertainment-shop-button" class="garvan-button">Shop now</button>
+            </div>
+            <div id="chapters-links-wrapper" class="col-md-6">
+                <a href="#prelude" class="chapter-link chapter-nav-link">- @Model.Prelude.ChapterHeader</a>
+                <a href="#first-chapter" class="chapter-link chapter-nav-link">- @Model.FirstChapter.ChapterHeader</a>
+                <a href="#second-chapter" class="chapter-link chapter-nav-link">- @Model.SecondChapter.ChapterHeader</a>
+                <a href="#third-chapter" class="chapter-link chapter-nav-link">- @Model.ThirdChapter.ChapterHeader</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}

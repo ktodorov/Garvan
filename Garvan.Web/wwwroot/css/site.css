@@ -89,11 +89,15 @@ button.garvan-button {
     border: 1px solid #222;
     color: #fefefe;
     text-transform: uppercase;
-    height: 35px;
-    min-width: 120px;
+    height: 40px;
+    min-width: 130px;
     font-size: 13px;
     font-weight: 100;
     vertical-align: top;
+    box-shadow: 0px 9px 30px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 9px 30px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 9px 30px 2px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 9px 30px 2px rgba(0,0,0,0.4);
 }
 
     button.garvan-button:hover {
@@ -170,14 +174,14 @@ h4.sub-header {
 }
 
 a.inside-link {
-    color: #6ec5be;
+    color: #17a297;
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: bold;
 }
 
     a.inside-link:visited {
-        color: #6ec5be;
+        color: #17a297;
         text-decoration: underline;
     }
 
@@ -266,68 +270,68 @@ div.partial-div {
         background: #222;
     }
 
-        #cable-monster-div .img-container .table-wrapper, #specifications-div .img-container .table-wrapper {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
+.table-wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
-            #cable-monster-div .img-container .table-wrapper td, #specifications-div .img-container .table-wrapper td {
-                vertical-align: middle;
-                text-align: center;
-            }
-
-
-        #cable-monster-div .img-container img,
-        #specifications-div .img-container img {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            vertical-align: middle;
-            width: 100%;
-            max-width: 700px;
-        }
-
-    #cable-monster-div .text-container, #specifications-div .text-container {
-        background: #f9f9f9;
+    .table-wrapper td {
+        vertical-align: middle;
+        text-align: center;
     }
 
-    #cable-monster-div .img-container img.desk-front-img {
-        z-index: 1;
+
+#cable-monster-div .img-container img,
+#specifications-div .img-container img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 700px;
+}
+
+#cable-monster-div .text-container, #specifications-div .text-container {
+    background: #f9f9f9;
+}
+
+#cable-monster-div .img-container img.desk-front-img {
+    z-index: 1;
+}
+
+#cable-monster-div .img-container img.logo-img {
+    z-index: 2;
+    height: 50px;
+    width: 46px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#cable-monster-div .text-container {
+    padding: 15px 40px;
+}
+
+    #cable-monster-div .text-container p {
+        padding: 10px 0;
+        z-index: 100;
     }
 
-    #cable-monster-div .img-container img.logo-img {
-        z-index: 2;
-        height: 50px;
-        width: 46px;
+    #cable-monster-div .text-container img.bird-img {
+        height: 200px;
         position: absolute;
         right: 0;
         bottom: 0;
-        left: auto;
-        top: auto;
-        transform: none;
-        margin-right: 15px;
-        margin-bottom: 15px;
+        z-index: 1;
     }
-
-    #cable-monster-div .text-container {
-        padding: 15px 40px;
-    }
-
-        #cable-monster-div .text-container p {
-            padding: 10px 0;
-            z-index: 100;
-        }
-
-        #cable-monster-div .text-container img.bird-img {
-            height: 200px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
 
 #specifications-div .text-container {
     padding-right: 40px;
@@ -393,6 +397,13 @@ div.partial-div {
         #subscribe-div .subscribe-input-wrapper button.garvan-button {
             height: 40px;
         }
+
+    #subscribe-div button.garvan-button {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+    }
 
 #distributors-div {
     text-align: center;
@@ -541,3 +552,79 @@ img.shine-img {
     left: 0;
     top: 0;
 }
+
+div#story-div {
+    background: #1d1d1d;
+    display: block;
+    width: 0 auto;
+    color: white;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+    #story-div #current-story-image-wrapper img {
+        height: 320px;
+    }
+
+#story-div #story-wrapper {
+    padding: 35px 0;
+}
+
+#story-div #story-wrapper,
+#story-div #chapters-inner-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#story-div h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.story-text-wrapper p, .story-text-wrapper a {
+    padding: 10px 15px;
+}
+
+.story-text-wrapper h4 {
+    font-size: 20px;
+}
+
+.story-text-wrapper span.capitalized-letter {
+    float: left;
+    font-family: Georgia;
+    font-size: 45px;
+    line-height: 30px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+#story-div #chapters-outer-wrapper {
+    background: white;
+    color: black;
+    padding: 30px 0;
+}
+
+    #story-div #chapters-outer-wrapper .chapter-div {
+        padding: 50px 0;
+    }
+
+#story-div #chapters-links-wrapper {
+    padding: 20px;
+    padding-top: 50px;
+}
+
+    #story-div #chapters-links-wrapper a,
+    #story-div #chapters-links-wrapper a:active,
+    #story-div #chapters-links-wrapper a:visited {
+        display: block;
+        margin: 5px 0;
+        color: #8bd1cb;
+        text-decoration: none;
+    }
+
+        #story-div #chapters-links-wrapper a.selected-chapter {
+            font-weight: bold;
+            color: #17a297;
+        }
