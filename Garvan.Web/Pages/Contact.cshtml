@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = Resources.Contacts;
 }
-    
+
 @model ContactModel
 <div id="contacts-div">
     <h2>@Resources.Contacts</h2>
@@ -10,31 +10,32 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form>
+            <form id="garvan-contact-form">
                 <div class="contacts-row">
                     <div class="row">
                         <div class="input-wrapper col-md-6 separate-control">
-                            <span class="input-label">Name:</span>
-                            <input type="text" id="name-input" />
+                            <label for="Name" class="input-label">Name:</label>
+                            <input name="Name" type="text" id="name-input" />
                         </div>
                         <div class="input-wrapper col-md-6 separate-control">
-                            <span class="input-label">E-mail:</span>
-                            <input type="text" id="email-input" />
+                            <label for="Email" class="input-label">E-mail:</label>
+                            <input name="Email" type="text" id="email-input" />
                         </div>
                     </div>
                 </div>
                 <div class="contacts-row">
                     <div class="input-wrapper separate-control">
-                        <span class="input-label">Subject:</span>
-                        <input type="text" id="subject-input" />
+                        <label for="Subject" class="input-label">Subject:</label>
+                        <input name="Subject" type="text" id="subject-input" />
                     </div>
                 </div>
                 <div class="contacts-row">
                     <div class="input-wrapper separate-control">
-                        <span class="input-label">Your message:</span>
-                        <textarea id="message-input"></textarea>
+                        <label for="Message" class="input-label">Your message:</label>
+                        <textarea name="Message" id="message-input"></textarea>
                     </div>
                 </div>
+
                 <div class="contacts-row separate-control">
                     <div class="g-recaptcha" data-sitekey="6Lec8jwUAAAAAC_tB1tIwXKK25BKqM22ykyu30zw"></div>
                 </div>
@@ -42,6 +43,12 @@
                     <button type="submit" class="garvan-button">Send message</button>
                 </div>
             </form>
+
+            @{await Html.RenderPartialAsync("Partials/ErrorMessage");}
+
+            @{await Html.RenderPartialAsync("Partials/InfoMessage");}
+
+            @{await Html.RenderPartialAsync("Partials/LoadingWrapper");}
         </div>
         <div id="contacts-info-div" class="col-md-6">
             <table id="contacts-info-links-table">

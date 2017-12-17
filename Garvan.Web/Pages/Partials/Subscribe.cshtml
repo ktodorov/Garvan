@@ -3,7 +3,7 @@
 
 <div id="subscribe-div" class="partial-div">
     <h3>
-        @Resources.SubscribeToOurNewsletter:
+        @Resources.SubscribeToOurNewsletter.
     </h3>
     <h4>
         @Resources.AndDontMissCoolNewProductsAndSpecialOffers!
@@ -15,28 +15,11 @@
         </form>
     </div>
 
-    <div class="subscribe-error-wrapper hidden">
-        <button class="subscribe-error-close-button"><i class="fa fa-close"></i></button>
-        <div class="subscribe-error-message-wrapper">
-            <i class="fa fa-times-circle-o fa-2x subscribe-error-sign"></i>
-            <div class="subscribe-error-message">Your e-mail is already registered</div>
-        </div>
-    </div>
+    @{await Html.RenderPartialAsync("Partials/ErrorMessage");}
 
-    <div class="subscribe-info-wrapper hidden">
-        <button class="subscribe-info-close-button"><i class="fa fa-close"></i></button>
-        <div class="subscribe-info-message-wrapper">
-            <i class="fa fa-check-circle-o fa-2x subscribe-error-sign"></i>
-            <div class="subscribe-info-message">
-                Your e-mail was successfully registered.<br/>
-                Stay tuned for more Garvan news.
-            </div>
-        </div>
-    </div>
+    @{await Html.RenderPartialAsync("Partials/InfoMessage");}
 
-    <div class="loading-wrapper hidden">
-        <img src="~/images/loading/ajax-loader.gif" />
-    </div>
+    @{await Html.RenderPartialAsync("Partials/LoadingWrapper");}
 </div>
 
 @section Scripts {

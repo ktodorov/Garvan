@@ -43,13 +43,13 @@
         var $subscribeDiv = $(this).closest("#subscribe-div");
         var $emailInput = $subscribeDiv.find(".email-subscribe-input");
         if (!$emailInput) {
-            displaySubscribeError($subscribeDiv, "Something happened. Please try again");
+            displayErrorMessage($subscribeDiv, "Something happened. Please try again");
             return;
         }
 
         var emailEntered = $emailInput.val();
         if (!emailEntered || !isEmail(emailEntered)) {
-            displaySubscribeError($subscribeDiv, "Please enter valid e-mail address");
+            displayErrorMessage($subscribeDiv, "Please enter valid e-mail address");
             return;
         }
 
@@ -65,14 +65,14 @@
             data: JSON.stringify(emailEntered),
             dataType: "json",
             error: function (xhr, status, errorThrown) {
-                displaySubscribeError($subscribeDiv, "Error occurred. Please try again");
+                displayErrorMessage($subscribeDiv, "Error occurred. Please try again");
             },
             success: function (response) {
                 if (response != null && response.success) {
-                    displaySubscribeInfo($subscribeDiv, "Your e-mail was successfully registered.<br/>Stay tuned for more news from Garvan.");
+                    displayInfoMessage($subscribeDiv, "Your e-mail was successfully registered.<br/>Stay tuned for more news from Garvan.");
                     $emailInput.val('');
                 } else {
-                    displaySubscribeError($subscribeDiv, response.responseText);
+                    displayErrorMessage($subscribeDiv, response.responseText);
                 }
             }
         }).always(function () {
@@ -80,32 +80,81 @@
         });
     });
 
-    function displaySubscribeError($subscribeDiv, message) {
-        var $subscribeErrorWrapper = $subscribeDiv.find(".subscribe-error-wrapper");
-        var $subscribeErrorMessage = $subscribeErrorWrapper.find(".subscribe-error-message");
+    function displayErrorMessage($subscribeDiv, message) {
+        var $subscribeErrorWrapper = $subscribeDiv.find(".error-wrapper");
+        var $subscribeErrorMessage = $subscribeErrorWrapper.find(".error-message");
         $subscribeErrorMessage.html(message);
         $subscribeErrorWrapper.removeClass("hidden");
     }
 
-    function displaySubscribeInfo($subscribeDiv, message) {
-        var $subscribeInfoWrapper = $subscribeDiv.find(".subscribe-info-wrapper");
-        var $subscribeInfoMessage = $subscribeInfoWrapper.find(".subscribe-info-message");
+    function displayInfoMessage($subscribeDiv, message) {
+        var $subscribeInfoWrapper = $subscribeDiv.find(".info-wrapper");
+        var $subscribeInfoMessage = $subscribeInfoWrapper.find(".info-message");
         $subscribeInfoMessage.html(message);
         $subscribeInfoWrapper.removeClass("hidden");
     }
 
-    $(".subscribe-error-close-button").click(function (event) {
-        var $subscribeErrorWrapper = $(this).closest(".subscribe-error-wrapper");
+    $(".error-close-button").click(function (event) {
+        var $subscribeErrorWrapper = $(this).closest(".error-wrapper");
         $subscribeErrorWrapper.addClass("hidden");
     });
 
-    $(".subscribe-info-close-button").click(function (event) {
-        var $subscribeErrorWrapper = $(this).closest(".subscribe-info-wrapper");
+    $(".info-close-button").click(function (event) {
+        var $subscribeErrorWrapper = $(this).closest(".info-wrapper");
         $subscribeErrorWrapper.addClass("hidden");
     });
 
     function isEmail(email) {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
+    }
+
+    $("#garvan-contact-form").submit(function (event) {
+        event.preventDefault();
+
+        var $form = $(this);
+        var serializedData = JSON.stringify($form.serialize());
+        //form encoded data
+        var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
+        var data = $form.serialize();
+        disableContactForm($form, true);
+        debugger;
+
+        var $formParent = $form.closest("div");
+        var $loadingWrapper = $formParent.find(".loading-wrapper");
+        $loadingWrapper.removeClass("hidden");
+
+        $.ajax({
+            url: 'Contact/SendEmail',
+            type: 'POST',
+            contentType: dataType,
+            dataType: 'json',
+            data: data,
+        })
+            .done(function (response) {
+                debugger;
+                if (response != null && response.success) {
+                    displayInfoMessage($formParent, response.responseText);
+                } else {
+                    displayErrorMessage($formParent, response.responseText);
+                }
+
+                disableContactForm($form, false);
+                $loadingWrapper.addClass("hidden");
+                clearContactForm($form);
+            });
+
+    });
+
+    function disableContactForm($contactForm, isEnabled) {
+        $contactForm.find("input").prop("disabled", isEnabled);
+        $contactForm.find("textarea").prop("disabled", isEnabled);
+        $contactForm.find("button").prop("disabled", isEnabled);
+    }
+
+    function clearContactForm($contactForm) {
+        $contactForm.find("input").val('');
+        $contactForm.find("textarea").val('');
+        $contactForm.find("button").val('');
     }
 });

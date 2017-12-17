@@ -28,9 +28,11 @@ namespace Garvan.Web
         {
             services.AddAutoMapper();
             services.AddMvc();
+            services.AddSingleton<IConfiguration>(Configuration);
 
             // Add application services.
             services.AddTransient<ISubscribedUserService, SubscribedUserService>();
+            services.AddTransient<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
