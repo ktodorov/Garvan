@@ -8,6 +8,7 @@ using Garvan.Data.Services;
 using Garvan.Database.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -47,8 +48,20 @@ namespace Garvan.Web
             {
                 app.UseExceptionHandler("/Error");
             }
-
+            //Perform middleware for static files and end processing
             app.UseStaticFiles();
+            app.Use(async (context, next) =>
+            {
+                await next.Invoke();
+                
+                //After going down the pipeline check if we 404'd. 
+                if (context.Response.StatusCode == StatusCodes.Status404NotFound)
+                {
+                    var errorPath = @"/Error?statusCode=404";
+                    context.Response.Redirect(errorPath, true);
+                }
+            });
+
 
             app.UseMvc(routes =>
             {

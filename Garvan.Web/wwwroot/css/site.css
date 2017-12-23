@@ -773,3 +773,14 @@ span.capitalized-letter {
     float: none;
     display: table-cell;
 }
+
+#error-page-wrapper {
+    padding: 35px;
+}
+
+    #error-page-wrapper h1 {
+        font-size: 45px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #17a297;
+    }
