@@ -2,7 +2,7 @@
     <div class="footer-wrapper">
         <div class="row">
             <div class="col-md-4">
-                <h4>Navigate</h4>
+                <h4>@Resources.Navigate</h4>
                 <ul>
                     <li><a asp-page="/Index">@Resources.Home</a></li>
                     <li><a asp-page="/Contact">@Resources.Shop</a></li>
@@ -11,7 +11,7 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h4>About the site</h4>
+                <h4>@Resources.AboutTheSite</h4>
                 <ul>
                     <li><a asp-page="/Index">@Resources.TermsAndConditions</a></li>
                     <li><a asp-page="/Index">@Resources.PrivacyPolicy</a></li>
@@ -19,11 +19,11 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h4>Call us</h4>
+                <h4>@Resources.CallUs</h4>
                 <ul>
-                    <li><a href="tel:0889123456">+359 88 9 123 456</a></li>
+                    <li><a href="tel:@Resources.GarvanPhoneWithoutSpaces">@Resources.GarvanPhone</a></li>
                 </ul>
-                <h4>Follow us</h4>
+                <h4>@Resources.FollowUs</h4>
                 <ul>
                     <li>
                         <a href="https://www.facebook.com/garvanentertainment/" class="fa fa-facebook-square fa-2x"></a>
@@ -35,7 +35,7 @@
         </div>
         <hr />
         <div class="footer-copyrights-wrapper">
-            &copy; 2017 - @Resources.Garvan Entertainment. All rights reserved.
+            &copy; @DateTime.Now.Year - @Resources.Copyrights
         </div>
     </div>
 </footer>

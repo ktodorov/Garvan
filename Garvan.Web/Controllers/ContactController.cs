@@ -26,15 +26,15 @@ namespace Garvan.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> SendEmail(EmailToSendDto emailToSendDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new { success = false, responseText = Resources.Resources.PleaseFillAllFields });
+            }
+
             var response = Request.Form["g-recaptcha-response"];
             if (!response.Any(r => !string.IsNullOrEmpty(r)))
             {
-                return Json(new { success = false, responseText = "Invalid captcha entered. Please try again." });
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return Json(new { success = false, responseText = "Please fill all fields." });
+                return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
 
             string secretKey = "your secret key here";
@@ -45,12 +45,12 @@ namespace Garvan.Web.Controllers
 
             if (!status)
             {
-                return Json(new { success = false, responseText = "Invalid captcha entered. Please try again." });
+                return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
 
             var emailToSend = _mapper.Map<EmailToSend>(emailToSendDto);
             await _emailService.SendEmail(emailToSend);
-                return Json(new { success = true, responseText = "Message sent. We will contact you shortly." });
+                return Json(new { success = true, responseText = Resources.Resources.MessageSent });
         }
     }
 }

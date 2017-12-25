@@ -30,7 +30,7 @@ namespace Garvan.Web.Controllers
             var dbSubscribedUser = await _subscribedUserService.GetSubscribedUserByEmail(email);
             if (dbSubscribedUser != null)
             {
-                return Json(new { success = false, responseText = "This e-mail is already registered." });
+                return Json(new { success = false, responseText = Resources.Resources.EmailAlreadyRegistered });
             }
 
             var subscribedUser = new SubscribedUser()
@@ -40,6 +40,12 @@ namespace Garvan.Web.Controllers
 
             await _subscribedUserService.AddSubscribedUserAsync(subscribedUser);
             return Json(new { success = true });
+        }
+
+        public IActionResult GetRequiredResources()
+        {
+            var subscribeResources = new SubscribeResourcesModel();
+            return Ok(subscribeResources);
         }
     }
 }

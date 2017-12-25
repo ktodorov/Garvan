@@ -12,17 +12,6 @@
     }
 
     var firstParagraph = Model.ParagraphsTexts.FirstOrDefault();
-    var firstParagraphFirstLetter = ' ';
-    var firstParagraphRemaining = string.Empty;
-    if (firstParagraph != null)
-    {
-        firstParagraphFirstLetter = firstParagraph[0];
-        if (firstParagraph.Length > 1)
-        {
-            firstParagraphRemaining = firstParagraph.Remove(0, 1);
-        }
-    }
-
     var remainingParagraphs = new List<string>(Model.ParagraphsTexts);
     remainingParagraphs.RemoveAt(0);
 }
@@ -31,8 +20,7 @@
     <h4>@Model.ChapterHeader</h4>
 
     <p>
-        <span class="capitalized-letter">@firstParagraphFirstLetter</span>
-        @firstParagraphRemaining
+        @Html.BuildTextWithCapitalizedFirstLetter(firstParagraph)
     </p>
 
     @foreach (var paragraph in remainingParagraphs)
@@ -44,6 +32,6 @@
 
     @if (!string.IsNullOrWhiteSpace(Model.NextChapterDiv))
     {
-        <a href="#@Model.NextChapterDiv" class="inside-link chapter-link">Next chapter</a>
+        <a href="#@Model.NextChapterDiv" class="inside-link chapter-link">@Resources.NextChapter</a>
     }
 </div>

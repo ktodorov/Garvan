@@ -1,4 +1,10 @@
 ﻿$(document).ready(() => {
+    var resources = {
+        SomethingHappened: "",
+        EnterValidEmail: "",
+        ErrorOccurred: "",
+        EmailSuccessfullyRegistered: ""
+    };
 
     $("#shop-button").click(() => {
         window.location.href = '/Contact';
@@ -40,43 +46,46 @@
 
     $(".subscribe-register-form").on('submit', function (event) {
         event.preventDefault();
-        var $subscribeDiv = $(this).closest("#subscribe-div");
-        var $emailInput = $subscribeDiv.find(".email-subscribe-input");
-        if (!$emailInput) {
-            displayErrorMessage($subscribeDiv, "Something happened. Please try again");
-            return;
-        }
-
-        var emailEntered = $emailInput.val();
-        if (!emailEntered || !isEmail(emailEntered)) {
-            displayErrorMessage($subscribeDiv, "Please enter valid e-mail address");
-            return;
-        }
-
-        var $loadingWrapper = $subscribeDiv.find(".loading-wrapper");
-        $loadingWrapper.removeClass("hidden");
-        $.ajax({
-            type: "POST",
-            url: "/Subscribe/AddEmail",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            data: JSON.stringify(emailEntered),
-            dataType: "json",
-            error: function (xhr, status, errorThrown) {
-                displayErrorMessage($subscribeDiv, "Error occurred. Please try again");
-            },
-            success: function (response) {
-                if (response != null && response.success) {
-                    displayInfoMessage($subscribeDiv, "Your e-mail was successfully registered.<br/>Stay tuned for more news from Garvan.");
-                    $emailInput.val('');
-                } else {
-                    displayErrorMessage($subscribeDiv, response.responseText);
-                }
+        loadResources(() => {
+            debugger;
+            var $subscribeDiv = $(this).closest("#subscribe-div");
+            var $emailInput = $subscribeDiv.find(".email-subscribe-input");
+            if (!$emailInput) {
+                displayErrorMessage($subscribeDiv, resources.SomethingHappened);
+                return;
             }
-        }).always(function () {
-            $loadingWrapper.addClass("hidden");
+
+            var emailEntered = $emailInput.val();
+            if (!emailEntered || !isEmail(emailEntered)) {
+                displayErrorMessage($subscribeDiv, resources.EnterValidEmail);
+                return;
+            }
+
+            var $loadingWrapper = $subscribeDiv.find(".loading-wrapper");
+            $loadingWrapper.removeClass("hidden");
+            $.ajax({
+                type: "POST",
+                url: "/Subscribe/AddEmail",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(emailEntered),
+                dataType: "json",
+                error: function (xhr, status, errorThrown) {
+                    displayErrorMessage($subscribeDiv, resources.ErrorOccurred);
+                },
+                success: function (response) {
+                    if (response != null && response.success) {
+                        displayInfoMessage($subscribeDiv, resources.EmailSuccessfullyRegistered);
+                        $emailInput.val('');
+                    } else {
+                        displayErrorMessage($subscribeDiv, response.responseText);
+                    }
+                }
+            }).always(function () {
+                $loadingWrapper.addClass("hidden");
+            });
         });
     });
 
@@ -111,39 +120,44 @@
 
     $("#garvan-contact-form").submit(function (event) {
         event.preventDefault();
-
         var $form = $(this);
-        var serializedData = JSON.stringify($form.serialize());
-        //form encoded data
-        var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
-        var data = $form.serialize();
-        disableContactForm($form, true);
-        debugger;
 
-        var $formParent = $form.closest("div");
-        var $loadingWrapper = $formParent.find(".loading-wrapper");
-        $loadingWrapper.removeClass("hidden");
+        loadResources(() => {
+            var $formParent = $form.closest("div");
+            var emailEntered = $form.find("#contactEmailInput").val();
+            if (!emailEntered || !isEmail(emailEntered)) {
+                displayErrorMessage($formParent, resources.EnterValidEmail);
+                return;
+            }
 
-        $.ajax({
-            url: 'Contact/SendEmail',
-            type: 'POST',
-            contentType: dataType,
-            dataType: 'json',
-            data: data,
-        })
-            .done(function (response) {
-                debugger;
-                if (response != null && response.success) {
-                    displayInfoMessage($formParent, response.responseText);
-                } else {
-                    displayErrorMessage($formParent, response.responseText);
-                }
+            var serializedData = JSON.stringify($form.serialize());
+            //form encoded data
+            var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
+            var data = $form.serialize();
+            disableContactForm($form, true);
 
-                disableContactForm($form, false);
-                $loadingWrapper.addClass("hidden");
-                clearContactForm($form);
-            });
+            var $loadingWrapper = $formParent.find(".loading-wrapper");
+            $loadingWrapper.removeClass("hidden");
 
+            $.ajax({
+                url: 'Contact/SendEmail',
+                type: 'POST',
+                contentType: dataType,
+                dataType: 'json',
+                data: data
+            })
+                .done(function (response) {
+                    if (response != null && response.success) {
+                        displayInfoMessage($formParent, response.responseText);
+                        clearContactForm($form);
+                    } else {
+                        displayErrorMessage($formParent, response.responseText);
+                    }
+
+                    disableContactForm($form, false);
+                    $loadingWrapper.addClass("hidden");
+                });
+        });
     });
 
     function disableContactForm($contactForm, isEnabled) {
@@ -156,5 +170,26 @@
         $contactForm.find("input").val('');
         $contactForm.find("textarea").val('');
         $contactForm.find("button").val('');
+    }
+
+    function loadResources(callbackFunc) {
+        if (resources.SomethingHappened) {
+            callbackFunc();
+            return;
+        }
+
+        $.ajax({
+            url: 'Subscribe/GetRequiredResources',
+            type: 'GET'
+        })
+            .success(function (response) {
+                debugger;
+                resources.SomethingHappened = response.somethingHappened;
+                resources.EnterValidEmail = response.enterValidEmail;
+                resources.ErrorOccurred = response.errorOccurred;
+                resources.EmailSuccessfullyRegistered = response.emailSuccessfullyRegistered;
+
+                callbackFunc();
+            });
     }
 });

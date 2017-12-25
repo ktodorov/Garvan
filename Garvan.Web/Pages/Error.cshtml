@@ -1,7 +1,7 @@
 ﻿@page
 @model ErrorModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = Resources.Error;
 }
 
 @{
@@ -10,32 +10,32 @@
         return;
     }
 
-    var statusmessage = "";
+    var statusmessage = string.Empty;
     var statusCode = Model.StatusCode;
     switch (Model.StatusCode)
     {
         case 400:
-            statusmessage = "Bad request: The request cannot be fulfilled due to bad syntax";
+            statusmessage = Resources.Error400;
             break;
         case 403:
-            statusmessage = "Forbidden";
+            statusmessage = Resources.Error403;
             break;
         case 404:
-            statusmessage = "Oops, this page was not found";
+            statusmessage = Resources.Error404;
             break;
         case 408:
-            statusmessage = "The server timed out waiting for the request";
+            statusmessage = Resources.Error408;
             break;
         case 500:
-            statusmessage = "Internal Server Error - server was unable to finish processing the request";
+            statusmessage = Resources.Error500;
             break;
         default:
             statusCode = 500;
-            statusmessage = "That’s odd... Something we didn't expect happened";
+            statusmessage = Resources.ErrorOther;
             break;
     }
 }
 <div id="error-page-wrapper">
-    <h1>Error @statusCode</h1>
+    <h1>@Resources.Error @statusCode</h1>
     <h2>@statusmessage</h2>
 </div>

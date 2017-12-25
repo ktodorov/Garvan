@@ -8,19 +8,18 @@
         <div class="col-md-2"></div>
         <div id="about-div-wrapper" class="col-md-5">
             <h1>@Resources.AboutUs</h1>
-            <h3>Everything we do, we believe in better gaming world.</h3>
+            <h3>@Resources.AboutUsSubHeader</h3>
 
             <div id="about-info-wrapper">
                 <div id="info-text-wrapper">
-                    <span class="capitalized-letter">T</span>his gaming world will be enhanced through our beautiful designed products.
-                    The first step towards improving the gaming experience is to remove the Cable Monster out of your desk!
+                    @Html.BuildTextWithCapitalizedFirstLetter(Resources.AboutUsInfo)
                 </div>
 
                 <div id="your-world-wrapper">
-                    Because it’s <b>Your World!</b>
+                    @Html.Raw(Resources.AboutUsSubInfo)
                 </div>
 
-                <button id="shop-button" class="garvan-button">Shop now</button>
+                @Html.GetShopNowButton()
             </div>
 
         </div>
