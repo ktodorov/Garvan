@@ -37,7 +37,7 @@ namespace Garvan.Web.Controllers
                 return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
 
-            string secretKey = "your secret key here";
+            string secretKey = "6LellD4UAAAAAGyy_jfZMX7ANXhjXjnQJTYU_DK1";
             var client = new WebClient();
             var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response));
             var obj = JObject.Parse(result);
