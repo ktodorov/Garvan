@@ -35,6 +35,11 @@ namespace Garvan.Web
             // Add application services.
             services.AddTransient<ISubscribedUserService, SubscribedUserService>();
             services.AddTransient<IEmailService, EmailService>();
+            services.AddDbContext<GarvanContext>(optionsAction:
+                    options =>
+                    {
+                        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                    });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +59,7 @@ namespace Garvan.Web
             app.Use(async (context, next) =>
             {
                 await next.Invoke();
-                
+
                 //After going down the pipeline check if we 404'd. 
                 if (context.Response.StatusCode == StatusCodes.Status404NotFound)
                 {
@@ -62,7 +67,6 @@ namespace Garvan.Web
                     context.Response.Redirect(errorPath, true);
                 }
             });
-
 
             app.UseMvc(routes =>
             {

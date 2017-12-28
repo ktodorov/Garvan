@@ -145,7 +145,7 @@
                 contentType: dataType,
                 dataType: 'json',
                 data: data
-            })
+            })  
                 .done(function (response) {
                     if (response != null && response.success) {
                         displayInfoMessage($formParent, response.responseText);

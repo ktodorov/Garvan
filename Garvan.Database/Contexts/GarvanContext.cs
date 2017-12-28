@@ -14,15 +14,31 @@ namespace Garvan.Database.Contexts
     {
         public DbSet<SubscribedUser> SubscribedUsers { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public GarvanContext(DbContextOptions<GarvanContext> contextOptions) : base(contextOptions)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("appsettings.json")
-                .Build();
+            Database.AutoTransactionsEnabled = false;
 
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+            MigrateIfNeededAsync().Wait();
         }
+
+        public async Task MigrateIfNeededAsync()
+        {
+            var pendingMigrations = await Database.GetPendingMigrationsAsync();
+            if (pendingMigrations.Any())
+            {
+                await Database.MigrateAsync();
+            }
+        }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    IConfigurationRoot configuration = new ConfigurationBuilder()
+        //        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+        //        .AddJsonFile("appsettings.json")
+        //        .Build();
+
+        //    optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

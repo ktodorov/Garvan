@@ -22,13 +22,12 @@ namespace Garvan.Data.Services
 
         public async Task SendEmail(EmailToSend emailToSend)
         {
-            var smtpConfigurationSection = _configuration.GetSection("SMTPSettings");
-            var smtpAddress = smtpConfigurationSection.GetSection("Address").Value;
-            var smtpUsername = smtpConfigurationSection.GetSection("Username").Value;
-            var smtpPassword = smtpConfigurationSection.GetSection("Password").Value;
-            var smtpPort = smtpConfigurationSection.GetSection("Port").Value.ConvertString<int>();
-            var smtpEnableSSL = smtpConfigurationSection.GetSection("UseSSL").Value.ConvertString<bool>();
-            var receiverEmail = smtpConfigurationSection.GetSection("ReceivingEmail").Value;
+            var smtpAddress = _configuration.GetSection("SMTP_Address").Value;
+            var smtpUsername = _configuration.GetSection("SMTP_Username").Value;
+            var smtpPassword = _configuration.GetSection("SMTP_Password").Value;
+            var smtpPort = _configuration.GetSection("SMTP_Port").Value.ConvertString<int>();
+            var smtpEnableSSL = _configuration.GetSection("SMTP_UseSSL").Value.ConvertString<bool>();
+            var receiverEmail = _configuration.GetSection("SMTP_ReceivingEmail").Value;
 
             using (var client = new SmtpClient(smtpAddress))
             {

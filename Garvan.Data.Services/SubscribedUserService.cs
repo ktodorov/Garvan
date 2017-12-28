@@ -12,33 +12,31 @@ namespace Garvan.Data.Services
 {
     public class SubscribedUserService : ISubscribedUserService
     {
+        public readonly GarvanContext _garvanContext;
+
+        public SubscribedUserService(GarvanContext garvanContext)
+        {
+            _garvanContext = garvanContext;
+        }
+
         public async Task AddSubscribedUserAsync(SubscribedUser subscribedUser)
         {
-            using (var garvanContext = new GarvanContext())
-            {
-                await garvanContext.SubscribedUsers.AddAsync(subscribedUser);
-                await garvanContext.SaveChangesAsync();
-            }
+            await _garvanContext.SubscribedUsers.AddAsync(subscribedUser);
+            await _garvanContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<SubscribedUser>> GetAllSubscribedUsersAsync()
         {
             var subscribedUsers = new List<SubscribedUser>();
-            using (var garvanContext = new GarvanContext())
-            {
-                subscribedUsers = await garvanContext.SubscribedUsers.ToListAsync();
-            }
+            subscribedUsers = await _garvanContext.SubscribedUsers.ToListAsync();
 
             return subscribedUsers;
         }
 
         public async Task<SubscribedUser> GetSubscribedUserByEmail(string email)
         {
-            using (var garvanContext = new GarvanContext())
-            {
-                var subscribedUser = await garvanContext.SubscribedUsers.FirstOrDefaultAsync(su => su.Email == email);
-                return subscribedUser;
-            }
+            var subscribedUser = await _garvanContext.SubscribedUsers.FirstOrDefaultAsync(su => su.Email == email);
+            return subscribedUser;
         }
     }
 }
