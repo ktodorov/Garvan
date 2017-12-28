@@ -8,6 +8,7 @@ using Garvan.Data.Interfaces;
 using Garvan.Entities;
 using Garvan.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 
 namespace Garvan.Web.Controllers
@@ -16,11 +17,13 @@ namespace Garvan.Web.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
+        private readonly IConfiguration _configuration;
 
-        public ContactController(IMapper mapper, IEmailService emailService)
+        public ContactController(IMapper mapper, IEmailService emailService, IConfiguration configuration)
         {
             _mapper = mapper;
             _emailService = emailService;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -37,7 +40,12 @@ namespace Garvan.Web.Controllers
                 return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
 
-            string secretKey = "6LellD4UAAAAAGyy_jfZMX7ANXhjXjnQJTYU_DK1";
+            string secretKey = _configuration.GetSection("RecaptchaSecretKey").Value;
+            if (string.IsNullOrWhiteSpace(secretKey))
+            {
+                return Json(new { success = false, responseText = Resources.Resources.ErrorOccurredTryAgain });
+            }
+
             var client = new WebClient();
             var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response));
             var obj = JObject.Parse(result);
@@ -50,7 +58,7 @@ namespace Garvan.Web.Controllers
 
             var emailToSend = _mapper.Map<EmailToSend>(emailToSendDto);
             await _emailService.SendEmail(emailToSend);
-                return Json(new { success = true, responseText = Resources.Resources.MessageSent });
+            return Json(new { success = true, responseText = Resources.Resources.MessageSent });
         }
     }
 }
