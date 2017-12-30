@@ -10,25 +10,29 @@
         window.location.href = '/Contact';
     });
 
-    $("a.chapter-link").on('click', function (event) {
+    $(".chapter-link").on('click', function (event) {
+        event.preventDefault();
         if (this.hash !== "") {
-            event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top - 70
+                scrollTop: $(hash).offset().top - 120
             }, 800);
         }
     });
 
     $(window).scroll(function () {
-        $("a.chapter-nav-link").removeClass("selected-chapter");
+        $(".chapter-nav-link").removeClass("selected-chapter");
 
-        var chapterLinks = $("a.chapter-nav-link");
+        var chapterLinks = $(".chapter-nav-link");
         for (var i = 0; i < chapterLinks.length; i++) {
             var linkHash = chapterLinks[i].hash;
+            if (!linkHash) {
+                continue;
+            }
+
             var elementIsVisible = isScrolledIntoView(linkHash);
             if (elementIsVisible) {
-                $("a.chapter-nav-link[href='" + linkHash + "']").addClass("selected-chapter");
+                $(".chapter-nav-link[href='" + linkHash + "']").addClass("selected-chapter");
                 return;
             }
         }
@@ -47,7 +51,6 @@
     $(".subscribe-register-form").on('submit', function (event) {
         event.preventDefault();
         loadResources(() => {
-            debugger;
             var $subscribeDiv = $(this).closest("#subscribe-div");
             var $emailInput = $subscribeDiv.find(".email-subscribe-input");
             if (!$emailInput) {
@@ -145,7 +148,7 @@
                 contentType: dataType,
                 dataType: 'json',
                 data: data
-            })  
+            })
                 .done(function (response) {
                     if (response != null && response.success) {
                         displayInfoMessage($formParent, response.responseText);
@@ -183,7 +186,6 @@
             type: 'GET'
         })
             .success(function (response) {
-                debugger;
                 resources.SomethingHappened = response.somethingHappened;
                 resources.EnterValidEmail = response.enterValidEmail;
                 resources.ErrorOccurred = response.errorOccurred;

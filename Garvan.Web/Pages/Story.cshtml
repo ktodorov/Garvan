@@ -28,22 +28,22 @@
                 <div id="@Model.Prelude.NextChapterDiv" class="chapter-div">
                     @{Html.RenderPartial("Partials/Chapter", model: Model.FirstChapter);}
                 </div>
-                <hr />
+                @*<hr />
                 <div id="@Model.FirstChapter.NextChapterDiv" class="chapter-div">
                     @{Html.RenderPartial("Partials/Chapter", model: Model.SecondChapter);}
                 </div>
                 <hr />
                 <div id="@Model.SecondChapter.NextChapterDiv" class="chapter-div">
                     @{Html.RenderPartial("Partials/Chapter", model: Model.ThirdChapter);}
-                </div>
+                </div>*@
 
                 <button id="shop-button" class="garvan-button">@Resources.ShopNow</button>
             </div>
             <div id="chapters-links-wrapper" class="col-md-6">
                 <a href="#prelude" class="chapter-link chapter-nav-link selected-chapter">- @Model.Prelude.ChapterHeader</a>
                 <a href="#first-chapter" class="chapter-link chapter-nav-link">- @Model.FirstChapter.ChapterHeader</a>
-                <a href="#second-chapter" class="chapter-link chapter-nav-link">- @Model.SecondChapter.ChapterHeader</a>
-                <a href="#third-chapter" class="chapter-link chapter-nav-link">- @Model.ThirdChapter.ChapterHeader</a>
+                <div class="chapter-link chapter-nav-link disabled">- @Model.SecondChapter.ChapterHeader</div>
+                <div class="chapter-link chapter-nav-link disabled">- @Model.ThirdChapter.ChapterHeader</div>
             </div>
         </div>
     </div>

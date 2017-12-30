@@ -412,6 +412,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New generation gaming desk.
+        /// </summary>
+        public static string NewGenerationGamingDesk {
+            get {
+                return ResourceManager.GetString("NewGenerationGamingDesk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next chapter.
         /// </summary>
         public static string NextChapter {
@@ -790,7 +799,7 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chapter 2.
+        ///   Looks up a localized string similar to Chapter 2 (comming soon...).
         /// </summary>
         public static string StoryChapter2Header {
             get {
@@ -853,7 +862,7 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chapter 3.
+        ///   Looks up a localized string similar to Chapter 3 (comming soon...).
         /// </summary>
         public static string StoryChapter3Header {
             get {

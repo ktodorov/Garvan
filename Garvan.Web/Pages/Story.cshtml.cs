@@ -34,7 +34,7 @@ namespace Garvan.Web.Pages
                 Resources.Resources.StoryChapter1Paragraph5,
                 Resources.Resources.StoryChapter1Paragraph6
             },
-            NextChapterDiv = "second-chapter"
+            //NextChapterDiv = "second-chapter"
         };
 
         public ChapterModel SecondChapter { get; set; } = new ChapterModel()

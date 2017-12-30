@@ -624,20 +624,31 @@ span.capitalized-letter {
     padding-top: 50px;
 }
 
-    #story-div #chapters-links-wrapper a,
-    #story-div #chapters-links-wrapper a:active,
-    #story-div #chapters-links-wrapper a:visited {
+    #story-div #chapters-links-wrapper .chapter-link,
+    #story-div #chapters-links-wrapper .chapter-link:active,
+    #story-div #chapters-links-wrapper .chapter-link:visited {
         display: block;
         margin: 5px 0;
         color: #8bd1cb;
         text-decoration: none;
     }
 
-        #story-div #chapters-links-wrapper a.selected-chapter {
+        #story-div #chapters-links-wrapper .chapter-link.selected-chapter {
             font-weight: bold;
             color: #17a297;
         }
 
+    #story-div #chapters-links-wrapper .disabled,
+    #story-div #chapters-links-wrapper .disabled:active,
+    #story-div #chapters-links-wrapper .disabled:visited {
+        color: #777;
+        margin: 5px 0;
+        cursor: default;
+    }
+
+        #story-div #chapters-links-wrapper .disabled:hover {
+            cursor: default;
+        }
 
 /* Loading gif */
 .loading-wrapper, .error-wrapper,

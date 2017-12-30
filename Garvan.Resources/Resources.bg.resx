@@ -441,4 +441,7 @@
   <data name="YourMessage" xml:space="preserve">
     <value>Вашето съобщение</value>
   </data>
+  <data name="NewGenerationGamingDesk" xml:space="preserve">
+    <value>Гейминг бюро от нова генерация</value>
+  </data>
 </root>

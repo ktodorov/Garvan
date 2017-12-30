@@ -370,7 +370,7 @@
     <value>His reign was threatened.</value>
   </data>
   <data name="StoryChapter2Header" xml:space="preserve">
-    <value>Chapter 2</value>
+    <value>Chapter 2 (comming soon...)</value>
   </data>
   <data name="StoryChapter2Paragraph1" xml:space="preserve">
     <value>Another day has passed. Her only wish was just to sit and play his favorite game, relaxing from the hard day. However, after an hour, her eyes got heavier and heavier. In one moment, she felt a creepy chill, as if someone is watching her, waiting to make a move.</value>
@@ -391,7 +391,7 @@
     <value>His reign was threatened.</value>
   </data>
   <data name="StoryChapter3Header" xml:space="preserve">
-    <value>Chapter 3</value>
+    <value>Chapter 3 (comming soon...)</value>
   </data>
   <data name="StoryChapter3Paragraph1" xml:space="preserve">
     <value>Another day has passed. Her only wish was just to sit and play his favorite game, relaxing from the hard day. However, after an hour, her eyes got heavier and heavier. In one moment, she felt a creepy chill, as if someone is watching her, waiting to make a move.</value>
@@ -440,5 +440,8 @@
   </data>
   <data name="YourMessage" xml:space="preserve">
     <value>Your message</value>
+  </data>
+  <data name="NewGenerationGamingDesk" xml:space="preserve">
+    <value>New generation gaming desk</value>
   </data>
 </root>
