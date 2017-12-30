@@ -203,68 +203,79 @@ div.partial-div {
 #garvan-entertainment-div {
     background-color: #e3e3e3;
     height: 500px;
-    display: flex;
-    align-items: center;
 }
 
+@media(min-width: 968px) {
+    #garvan-entertainment-div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media(max-width: 968px) {
     #garvan-entertainment-div img {
-        height: 80%;
-        width: 100%;
-        max-width: 700px;
+        margin: 35px 0;
     }
+}
 
-    #garvan-entertainment-div .info-text-div {
-        z-index: 100;
-    }
+#garvan-entertainment-div img {
+    height: 80%;
+    width: 100%;
+    max-width: 700px;
+}
 
-        #garvan-entertainment-div .info-text-div div {
-            float: right;
-        }
+#garvan-entertainment-div .info-text-div {
+    z-index: 100;
+}
 
-        #garvan-entertainment-div .info-text-div h2 {
-            font-size: 42px;
-            padding-top: 0px;
-        }
-
-        #garvan-entertainment-div .info-text-div p {
-            font-size: 20px;
-        }
-
-        #garvan-entertainment-div .info-text-div button {
-            margin-top: 20px;
-            height: 50px;
-            width: 162px;
-        }
-
-
-    #garvan-entertainment-div div, #garvan-entertainment-div p, #garvan-entertainment-div h2 {
-        padding: 0 5px;
-    }
-
-    #garvan-entertainment-div #garvan-entertainment-text > div {
+    #garvan-entertainment-div .info-text-div div {
         float: right;
-        text-align: left;
     }
 
-    #garvan-entertainment-div #garvan-entertainment-text h2 {
-        margin-bottom: 0px;
+    #garvan-entertainment-div .info-text-div h2 {
+        font-size: 42px;
+        padding-top: 0px;
     }
 
-    #garvan-entertainment-div #garvan-entertainment-text p {
-        margin-bottom: 20px;
+    #garvan-entertainment-div .info-text-div p {
+        font-size: 20px;
     }
 
-    #garvan-entertainment-div #garvan-entertainment-img img {
-        max-width: 100%;
-        max-height: 100%;
-        height: inherit !important;
+    #garvan-entertainment-div .info-text-div button {
+        margin-top: 20px;
+        height: 50px;
+        width: 162px;
     }
+
+
+#garvan-entertainment-div div, #garvan-entertainment-div p, #garvan-entertainment-div h2 {
+    padding: 0 5px;
+}
+
+#garvan-entertainment-div #garvan-entertainment-text > div {
+    float: right;
+    text-align: left;
+}
+
+#garvan-entertainment-div #garvan-entertainment-text h2 {
+    margin-bottom: 0px;
+}
+
+#garvan-entertainment-div #garvan-entertainment-text p {
+    margin-bottom: 20px;
+}
+
+#garvan-entertainment-div #garvan-entertainment-img img {
+    max-width: 100%;
+    max-height: 100%;
+    height: inherit !important;
+}
+
+
 
 #cable-monster-div, #specifications-div {
-    display: flex;
     width: 100%;
 }
-
 
 #cable-monster-div {
     min-height: 500px;
@@ -367,6 +378,22 @@ div.partial-div {
         padding: 10px 0;
         text-align: right;
     }
+
+@media(min-width: 968px) {
+    #cable-monster-div, #specifications-div {
+        display: flex;
+    }
+}
+
+@media(max-width: 968px) {
+    #cable-monster-div .text-container {
+        min-height: 500px;
+    }
+
+    #specifications-div .text-container {
+        padding: 15px 0;
+    }
+}
 
 #subscribe-div {
     position: relative;
