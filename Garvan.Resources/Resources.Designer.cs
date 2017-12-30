@@ -628,7 +628,7 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 180 mm (7.08&quot;).
+        ///   Looks up a localized string similar to 180 mm (7.08 in).
         /// </summary>
         public static string SpecificationsMaxCpuCoolerHeightValue {
             get {
@@ -646,7 +646,7 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 320 mm (12.6in).
+        ///   Looks up a localized string similar to 320 mm (12.6 in).
         /// </summary>
         public static string SpecificationsMaxGpuLengthValue {
             get {

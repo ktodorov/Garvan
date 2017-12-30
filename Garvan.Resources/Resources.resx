@@ -319,13 +319,13 @@
     <value>Max. CPU Cooler Height</value>
   </data>
   <data name="SpecificationsMaxCpuCoolerHeightValue" xml:space="preserve">
-    <value>180 mm (7.08")</value>
+    <value>180 mm (7.08 in)</value>
   </data>
   <data name="SpecificationsMaxGpuLengthLabel" xml:space="preserve">
     <value>Max. GPU Length</value>
   </data>
   <data name="SpecificationsMaxGpuLengthValue" xml:space="preserve">
-    <value>320 mm (12.6in)</value>
+    <value>320 mm (12.6 in)</value>
   </data>
   <data name="SpecificationsMaxLoadLabel" xml:space="preserve">
     <value>Max. Load</value>
