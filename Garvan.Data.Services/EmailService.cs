@@ -40,7 +40,7 @@ namespace Garvan.Data.Services
                 {
                     mailMessage.From = new MailAddress(emailToSend.Email);
                     mailMessage.To.Add(receiverEmail);
-                    mailMessage.Body = $"You received email from '{emailToSend.Email}';<br/><br/><br/> Subject: {emailToSend.Subject}<br/><br/><br/> {emailToSend.Message}";
+                    mailMessage.Body = $"You received email from '{emailToSend.Email}';{Environment.NewLine}{Environment.NewLine}{Environment.NewLine} Subject: {emailToSend.Subject}{Environment.NewLine}{Environment.NewLine}{Environment.NewLine} {emailToSend.Message}";
                     mailMessage.Subject = "Email from website form";
                     await client.SendMailAsync(mailMessage);
                 }
