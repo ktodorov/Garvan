@@ -87,7 +87,7 @@ body {
 button.garvan-button {
     background: #222;
     border: 1px solid #222;
-    color: #fefefe;
+    color: #ddd;
     text-transform: uppercase;
     height: 40px;
     min-width: 130px;
@@ -107,6 +107,15 @@ button.garvan-button {
 
     button.garvan-button:disabled {
         background: #555;
+    }
+
+    button.garvan-button.sub-button {
+        background: rgba(0, 0, 0, 0);
+        color: black;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
     }
 
 
@@ -355,23 +364,7 @@ div.partial-div {
         padding-left: 25px;
     }
 
-    #specifications-div .text-container table {
-        margin-top: 35px;
-    }
 
-        #specifications-div .text-container table th {
-            text-align: right;
-            vertical-align: top;
-            padding-right: 15px;
-            font-weight: bold;
-            width: 40%;
-        }
-
-        #specifications-div .text-container table td {
-            text-align: left;
-            vertical-align: top;
-            padding-bottom: 10px;
-        }
 
 
     #specifications-div .text-container .more-details-wrapper {
@@ -476,26 +469,6 @@ div.partial-div {
             }
 
 /* Contacts */
-
-@media (min-width: 768px) {
-    #contacts-div {
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-}
-
-
-@media (max-width: 768px) {
-    #contacts-div {
-        padding: 0 20px;
-    }
-
-        #contacts-div .separate-control {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-}
-
 @media (min-width: 768px) {
     #contacts-div .contacts-row {
         padding: 10px 0;
@@ -821,4 +794,121 @@ span.capitalized-letter {
         font-weight: bold;
         text-transform: uppercase;
         color: #17a297;
+    }
+
+/* Specifications table */
+table.specifications-table {
+    margin-top: 35px;
+}
+
+    table.specifications-table th {
+        text-align: right;
+        vertical-align: top;
+        padding-right: 15px;
+        font-weight: bold;
+        width: 40%;
+    }
+
+    table.specifications-table td {
+        text-align: left;
+        vertical-align: top;
+        padding-bottom: 10px;
+    }
+
+/* Page headers */
+.garvan-page-main-header {
+    font-weight: bold;
+}
+
+.garvan-page-sub-header {
+}
+
+@media (min-width: 768px) {
+    .centered-div {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .centered-div {
+        padding: 0 20px;
+    }
+
+        .centered-div .separate-control {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+}
+
+#desk-details-div {
+    margin-bottom: 70px;
+    margin-top: 60px;
+}
+
+    #desk-details-div .garvan-page-sub-header {
+        font-weight: bold;
+    }
+
+    #desk-details-div .desk-details-info-paragraph {
+        font-size: 18px;
+    }
+
+    #desk-details-div #desk-details-button-wrapper {
+        text-align: center;
+    }
+
+        #desk-details-div #desk-details-button-wrapper button {
+            margin: 0 7px;
+            margin-top: 30px;
+            width: 170px;
+        }
+
+
+    #desk-details-div #main-image-wrapper {
+        height: 300px;
+    }
+
+    #desk-details-div #main-image {
+        max-width: 100%;
+        max-height: 100%;
+        border: 1px solid #ccc;
+    }
+
+        #desk-details-div #main-image:hover {
+            cursor: crosshair;
+        }
+
+    #desk-details-div #images-picker {
+        padding: 30px 0;
+    }
+
+        #desk-details-div #images-picker .image-picker-wrapper {
+            border: 1px solid #ccc;
+            height: 120px;
+            margin: 0 5px;
+        }
+
+        #desk-details-div #images-picker .image-picker-wrapper:hover {
+            cursor: pointer;
+            border: 1px solid #aaa;
+        }
+
+            #desk-details-div #images-picker .image-picker-wrapper img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                width: 100%;
+            }
+
+    #desk-details-div #desk-details-overlay-image {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+        display: inline-block;
+        background-image: url('../images/pictures/desk_top_cut.jpg');
+        background-repeat: no-repeat;
     }

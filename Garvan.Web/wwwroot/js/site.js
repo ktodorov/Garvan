@@ -10,6 +10,10 @@
         window.location.href = '/Contact';
     });
 
+    $(".garvan-story-button").click(() => {
+        window.location.href = '/Story';
+    });
+
     $(".chapter-link").on('click', function (event) {
         event.preventDefault();
         if (this.hash !== "") {

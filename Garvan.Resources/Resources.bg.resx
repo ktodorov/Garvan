@@ -444,4 +444,46 @@
   <data name="NewGenerationGamingDesk" xml:space="preserve">
     <value>Гейминг бюро от нова генерация</value>
   </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Блог</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Свържете се с нас</value>
+  </data>
+  <data name="Desk" xml:space="preserve">
+    <value>Бюро</value>
+  </data>
+  <data name="GarvanDeskDetails" xml:space="preserve">
+    <value>Детайли за бюрото Гарван</value>
+  </data>
+  <data name="GarvanDeskDetailsInfo" xml:space="preserve">
+    <value>Гейминг бюра и аксесоари. Това е твоя свят</value>
+  </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Изпрати заявка</value>
+  </data>
+  <data name="TechnicalSpecifications" xml:space="preserve">
+    <value>Технически характеристики</value>
+  </data>
+  <data name="TheStory" xml:space="preserve">
+    <value>Историята</value>
+  </data>
+  <data name="SpecificationsDriveTraysLabel" xml:space="preserve">
+    <value>Слотове за дискове</value>
+  </data>
+  <data name="SpecificationsDriveTraysValue" xml:space="preserve">
+    <value>2 x 2,5″ (вътрешни) (до 10)&lt;br/&gt;1 x 3,5″ (вътрешни) (до 5)</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsLabel" xml:space="preserve">
+    <value>Монтаж за вентилатори</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsValue" xml:space="preserve">
+    <value>1x макс. 420x140x95 мм (ляво)&lt;br/&gt;1x макс. 420x140x95 мм (отзад)</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansLabel" xml:space="preserve">
+    <value>Възможен брой вентилатори</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
+    <value>3 x 140 мм (ляво)&lt;br/&gt;3 x 140 мм (отзад)&lt;br/&gt;3 x 140 мм вентилатори включени</value>
+  </data>
 </root>

@@ -1,0 +1,31 @@
+﻿$("#main-image").mouseout(zoomOut);
+$("#main-image").mousemove(function (event) {
+    zoomIn(event);
+});
+
+function zoomIn(event) {
+    var $element = $("#desk-details-overlay-image");
+    $element.css('display', 'inline-block');
+    var $img = $("#main-image");
+    var posX = event.offsetX ? (event.offsetX) : event.pageX - $img.css('offsetLeft');
+    var posY = event.offsetY ? (event.offsetY) : event.pageY - $img.css('offsetTop');
+    var imageElement = document.getElementById("main-image");
+    var realImageWidth = imageElement.naturalWidth;
+    var realImageHeight = imageElement.naturalHeight;
+    var imageHeightRatio = (realImageHeight / $img.outerHeight()) ;
+    var imageWidthRatio = (realImageWidth / $img.outerWidth()) ;
+    var backgroundPosition = ((-posX * imageWidthRatio) + 150) + "px " + ((-posY * imageHeightRatio) + 150) + "px";
+    $element.css('backgroundPosition', backgroundPosition);
+}
+
+function zoomOut() {
+    var $element = $("#desk-details-overlay-image");
+    $element.css('display', 'none');
+}
+
+$(".image-picker-wrapper").click(function () {
+    var $imageClicked = $(this).find("img").first();
+    var imageSource = $imageClicked.attr('src');
+    $("#desk-details-overlay-image").css('background-image', 'url(' + imageSource + ')');
+    $("#main-image").attr('src', imageSource);
+});

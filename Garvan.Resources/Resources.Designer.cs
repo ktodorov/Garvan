@@ -124,6 +124,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blog.
+        /// </summary>
+        public static string Blog {
+            get {
+                return ResourceManager.GetString("Blog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Call us.
         /// </summary>
         public static string CallUs {
@@ -142,11 +151,29 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact us.
+        /// </summary>
+        public static string ContactUs {
+            get {
+                return ResourceManager.GetString("ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Garvan Entertainment. All rights reserved..
         /// </summary>
         public static string Copyrights {
             get {
                 return ResourceManager.GetString("Copyrights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desk.
+        /// </summary>
+        public static string Desk {
+            get {
+                return ResourceManager.GetString("Desk", resourceCulture);
             }
         }
         
@@ -291,6 +318,24 @@ namespace Garvan.Resources {
         public static string Garvan {
             get {
                 return ResourceManager.GetString("Garvan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garvan Desk details.
+        /// </summary>
+        public static string GarvanDeskDetails {
+            get {
+                return ResourceManager.GetString("GarvanDeskDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gaming case-desks and accessories. It‘s your world..
+        /// </summary>
+        public static string GarvanDeskDetailsInfo {
+            get {
+                return ResourceManager.GetString("GarvanDeskDetailsInfo", resourceCulture);
             }
         }
         
@@ -484,6 +529,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send request.
+        /// </summary>
+        public static string SendRequest {
+            get {
+                return ResourceManager.GetString("SendRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shop.
         /// </summary>
         public static string Shop {
@@ -552,6 +606,24 @@ namespace Garvan.Resources {
         public static string SpecificationsDimensionsValue {
             get {
                 return ResourceManager.GetString("SpecificationsDimensionsValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drive trays.
+        /// </summary>
+        public static string SpecificationsDriveTraysLabel {
+            get {
+                return ResourceManager.GetString("SpecificationsDriveTraysLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 x 2,5″ (internal) (up to 10)&lt;br/&gt;1 x 3,5″ (internal) (up to 5).
+        /// </summary>
+        public static string SpecificationsDriveTraysValue {
+            get {
+                return ResourceManager.GetString("SpecificationsDriveTraysValue", resourceCulture);
             }
         }
         
@@ -700,11 +772,47 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Radiator mountings.
+        /// </summary>
+        public static string SpecificationsRadiatorMountingsLabel {
+            get {
+                return ResourceManager.GetString("SpecificationsRadiatorMountingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1x max. 420x140x 95 mm (left)&lt;br/&gt;1x max. 420x140x 95 mm (back).
+        /// </summary>
+        public static string SpecificationsRadiatorMountingsValue {
+            get {
+                return ResourceManager.GetString("SpecificationsRadiatorMountingsValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to What makes the magic?.
         /// </summary>
         public static string SpecificationsSubHeader {
             get {
                 return ResourceManager.GetString("SpecificationsSubHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total possible fans.
+        /// </summary>
+        public static string SpecificationsTotalPossibleFansLabel {
+            get {
+                return ResourceManager.GetString("SpecificationsTotalPossibleFansLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 x 140 mm (left)&lt;br/&gt;3 x 140 mm (back)&lt;br/&gt;3 x 140 mm fans included.
+        /// </summary>
+        public static string SpecificationsTotalPossibleFansValue {
+            get {
+                return ResourceManager.GetString("SpecificationsTotalPossibleFansValue", resourceCulture);
             }
         }
         
@@ -997,6 +1105,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Technical specifications.
+        /// </summary>
+        public static string TechnicalSpecifications {
+            get {
+                return ResourceManager.GetString("TechnicalSpecifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Terms and conditions.
         /// </summary>
         public static string TermsAndConditions {
@@ -1011,6 +1128,15 @@ namespace Garvan.Resources {
         public static string TheCableMonster {
             get {
                 return ResourceManager.GetString("TheCableMonster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The story.
+        /// </summary>
+        public static string TheStory {
+            get {
+                return ResourceManager.GetString("TheStory", resourceCulture);
             }
         }
         

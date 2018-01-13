@@ -444,4 +444,46 @@
   <data name="NewGenerationGamingDesk" xml:space="preserve">
     <value>New generation gaming desk</value>
   </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="Desk" xml:space="preserve">
+    <value>Desk</value>
+  </data>
+  <data name="GarvanDeskDetails" xml:space="preserve">
+    <value>Garvan Desk details</value>
+  </data>
+  <data name="GarvanDeskDetailsInfo" xml:space="preserve">
+    <value>Gaming case-desks and accessories. It‘s your world.</value>
+  </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Send request</value>
+  </data>
+  <data name="TechnicalSpecifications" xml:space="preserve">
+    <value>Technical specifications</value>
+  </data>
+  <data name="TheStory" xml:space="preserve">
+    <value>The story</value>
+  </data>
+  <data name="SpecificationsDriveTraysLabel" xml:space="preserve">
+    <value>Drive trays</value>
+  </data>
+  <data name="SpecificationsDriveTraysValue" xml:space="preserve">
+    <value>2 x 2,5″ (internal) (up to 10)&lt;br/&gt;1 x 3,5″ (internal) (up to 5)</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsLabel" xml:space="preserve">
+    <value>Radiator mountings</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsValue" xml:space="preserve">
+    <value>1x max. 420x140x 95 mm (left)&lt;br/&gt;1x max. 420x140x 95 mm (back)</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansLabel" xml:space="preserve">
+    <value>Total possible fans</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
+    <value>3 x 140 mm (left)&lt;br/&gt;3 x 140 mm (back)&lt;br/&gt;3 x 140 mm fans included</value>
+  </data>
 </root>

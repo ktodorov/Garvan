@@ -2,55 +2,11 @@
     <div class="col-md-4 text-container">
         <h3>@Resources.Specifications</h3>
         <h4 class="sub-header">@Resources.SpecificationsSubHeader</h4>
-        <table>
-            <tr>
-                <th>@Resources.SpecificationsDimensionsLabel:</th>
-                <td>@Resources.SpecificationsDimensionsValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsMaterialLabel:</th>
-                <td>@Resources.SpecificationsMaterialValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsWeightLabel:</th>
-                <td>@Resources.SpecificationsWeightValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsColorLabel:</th>
-                <td>@Resources.SpecificationsColorValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsMaxLoadLabel:</th>
-                <td>@Resources.SpecificationsMaxLoadValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsFrontIOLabel:</th>
-                <td>@Resources.SpecificationsFrontIOValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsFormFactorLabel:</th>
-                <td>@Resources.SpecificationsFormFactorValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsPowerSupplyLabel:</th>
-                <td>@Resources.SpecificationsPowerSupplyValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsExpansionSlotsLabel:</th>
-                <td>@Resources.SpecificationsExpansionSlotsValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsMaxGpuLengthLabel:</th>
-                <td>@Resources.SpecificationsMaxGpuLengthValue</td>
-            </tr>
-            <tr>
-                <th>@Resources.SpecificationsMaxCpuCoolerHeightLabel:</th>
-                <td>@Resources.SpecificationsMaxCpuCoolerHeightValue</td>
-            </tr>
-        </table>
+
+        @{await Html.RenderPartialAsync("Partials/SpecificationsTable", new Pages.Partials.SpecificationsTableModel() { IncludeAllSpecifications = false });}
 
         <div class="more-details-wrapper">
-            <a href="#" class="inside-link">@Resources.MoreDetails</a>
+            <a asp-page="/DeskDetails" class="inside-link">@Resources.MoreDetails</a>
         </div>
     </div>
     <div class="col-md-8 img-container">
