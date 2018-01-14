@@ -492,7 +492,7 @@ div.partial-div {
 }
 
     #contacts-div .loading-wrapper {
-        background: white;
+        background: rgba(255, 255, 255, 0.5);
         color: #17a297;
     }
 
@@ -665,8 +665,8 @@ span.capitalized-letter {
 .loading-wrapper, .error-wrapper,
 .loading-wrapper, .info-wrapper {
     position: absolute;
-    background-color: #FFD2D2;
-    color: #D8000C;
+    background-color: rgba(200,50,50, 0.9);
+    color: #ccc;
     text-align: center;
     top: 0;
     left: 0;
@@ -675,7 +675,7 @@ span.capitalized-letter {
 }
 
 .loading-wrapper, .info-wrapper {
-    background-color: #17a297;
+    background-color: rgba(23, 162, 151, 0.9);
     color: #97f2e7;
 }
 
