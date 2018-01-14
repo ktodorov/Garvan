@@ -12,8 +12,8 @@ function zoomIn(event) {
     var imageElement = document.getElementById("main-image");
     var realImageWidth = imageElement.naturalWidth;
     var realImageHeight = imageElement.naturalHeight;
-    var imageHeightRatio = (realImageHeight / $img.outerHeight()) ;
-    var imageWidthRatio = (realImageWidth / $img.outerWidth()) ;
+    var imageHeightRatio = (realImageHeight / $img.outerHeight());
+    var imageWidthRatio = (realImageWidth / $img.outerWidth());
     var backgroundPosition = ((-posX * imageWidthRatio) + 150) + "px " + ((-posY * imageHeightRatio) + 150) + "px";
     $element.css('backgroundPosition', backgroundPosition);
 }
@@ -28,4 +28,13 @@ $(".image-picker-wrapper").click(function () {
     var imageSource = $imageClicked.attr('src');
     $("#desk-details-overlay-image").css('background-image', 'url(' + imageSource + ')');
     $("#main-image").attr('src', imageSource);
+});
+
+$("#zoom-image-button").click(() => {
+    $("#outer-zoomed-image-wrapper").show();
+    $("#outer-zoomed-image-wrapper img").attr('src', $("#main-image").attr('src'));
+});
+
+$("#outer-zoomed-image-wrapper .close-button").click(() => {
+    $("#outer-zoomed-image-wrapper").hide();
 });

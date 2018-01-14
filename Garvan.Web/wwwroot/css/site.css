@@ -866,6 +866,7 @@ table.specifications-table {
 
 
     #desk-details-div #main-image-wrapper {
+        position: relative;
         height: 300px;
     }
 
@@ -873,6 +874,7 @@ table.specifications-table {
         max-width: 100%;
         max-height: 100%;
         border: 1px solid #ccc;
+        max-height: 300px;
     }
 
         #desk-details-div #main-image:hover {
@@ -889,17 +891,12 @@ table.specifications-table {
             margin: 0 5px;
         }
 
-        #desk-details-div #images-picker .image-picker-wrapper:hover {
-            cursor: pointer;
-            border: 1px solid #aaa;
-        }
+            #desk-details-div #images-picker .image-picker-wrapper:hover {
+                cursor: pointer;
+                border: 1px solid #aaa;
+            }
 
             #desk-details-div #images-picker .image-picker-wrapper img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
                 width: 100%;
             }
 
@@ -912,3 +909,104 @@ table.specifications-table {
         background-image: url('../images/pictures/desk_top_cut.jpg');
         background-repeat: no-repeat;
     }
+
+    #desk-details-div #main-image-wrapper #zoom-image-button {
+        z-index: 2;
+        height: 50px;
+        width: 46px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #39a8a0;
+        border: none;
+        color: white;
+        text-align: center;
+    }
+
+        #desk-details-div #main-image-wrapper #zoom-image-button:active {
+            border: none;
+        }
+
+        #desk-details-div #main-image-wrapper #zoom-image-button:hover {
+            cursor: pointer;
+        }
+
+        #desk-details-div #main-image-wrapper #zoom-image-button i {
+            line-height: 50px;
+        }
+
+
+        #desk-details-div #main-image-wrapper #zoom-image-button:hover i {
+            color: #eee;
+        }
+
+#outer-zoomed-image-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+    #outer-zoomed-image-wrapper img {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+        max-height: 90%;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+#outer-zoomed-image-wrapper .close-button {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+    #outer-zoomed-image-wrapper .close-button:hover,
+    #outer-zoomed-image-wrapper .close-button:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+@media(min-width: 992px) {
+    #desk-details-div #images-picker .image-picker-wrapper img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media(max-width: 992px) {
+    #desk-details-div #images-picker .image-picker-wrapper {
+        margin: 5px 0;
+        height: 100%;
+    }
+
+    #desk-details-div #main-image-wrapper #zoom-image-button {
+        display: none;
+    }
+}

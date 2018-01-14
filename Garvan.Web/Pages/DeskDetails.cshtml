@@ -8,7 +8,10 @@
 <div id="desk-details-div" class="centered-div row">
     <div class="col-md-7">
         <div id="main-image-wrapper">
-            <img id="main-image" src="~/images/pictures/desk_top_cut.jpg" />
+            <div style="position: relative; float: left;">
+                <img id="main-image" src="~/images/pictures/desk_top_cut.jpg" />
+                <a id="zoom-image-button"><i class="fa fa-search fa-2x"></i></a>
+            </div>
         </div>
         <div id="images-picker">
             <div class="row">
@@ -39,6 +42,13 @@
     </div>
 </div>
 
+<div id="outer-zoomed-image-wrapper">
+    <span class="close-button">
+        <i class="fa fa-times"></i>
+    </span>
+
+    <img src="~/images/pictures/desk_top_cut.jpg" />
+</div>
 
 @{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
 
