@@ -1,0 +1,37 @@
+﻿@model Garvan.Web.Pages.Partials.ChapterModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+
+    if (Model.ParagraphsTexts == null)
+    {
+        Model.ParagraphsTexts = new List<string>();
+    }
+
+    var firstParagraph = Model.ParagraphsTexts.FirstOrDefault();
+    var remainingParagraphs = new List<string>(Model.ParagraphsTexts);
+    remainingParagraphs.RemoveAt(0);
+}
+
+<div class="story-text-wrapper">
+    <h4>@Model.ChapterHeader</h4>
+
+    <p>
+        @Html.BuildTextWithCapitalizedFirstLetter(firstParagraph)
+    </p>
+
+    @foreach (var paragraph in remainingParagraphs)
+    {
+        <p>
+            @paragraph
+        </p>
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Model.NextChapterDiv))
+    {
+        <a href="#@Model.NextChapterDiv" class="inside-link chapter-link">@Resources.NextChapter</a>
+    }
+</div>

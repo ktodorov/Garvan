@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="AndDontMissCoolNewProductsAndSpecialOffers" xml:space="preserve">
+    <value>And don't miss cool new products and special offers</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="GamingCaseDesksAndAccessories" xml:space="preserve">
+    <value>Gaming case-desks and accessories</value>
+  </data>
+  <data name="Garvan" xml:space="preserve">
+    <value>Garvan</value>
+  </data>
+  <data name="GarvanEntertainment" xml:space="preserve">
+    <value>Garvan Entertainment</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ItsYourWorld" xml:space="preserve">
+    <value>It's &lt;b&gt;your&lt;/b&gt; world</value>
+  </data>
+  <data name="LinkedIn" xml:space="preserve">
+    <value>LinkedIn</value>
+  </data>
+  <data name="OurDistributors" xml:space="preserve">
+    <value>Our distributors</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Shop</value>
+  </data>
+  <data name="Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="SubscribeToOurNewsletter" xml:space="preserve">
+    <value>Subscribe to our newsletter</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>Terms and conditions</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="AboutTheSite" xml:space="preserve">
+    <value>About the site</value>
+  </data>
+  <data name="AboutUsInfo" xml:space="preserve">
+    <value>This gaming world will be enhanced through our beautiful designed products. The first step towards improving the gaming experience is to remove the Cable Monster out of your desk!</value>
+  </data>
+  <data name="AboutUsSubHeader" xml:space="preserve">
+    <value>Everything we do, we believe in better gaming world.</value>
+  </data>
+  <data name="AboutUsSubInfo" xml:space="preserve">
+    <value>Because it’s &lt;b&gt;Your World!&lt;/b&gt;</value>
+  </data>
+  <data name="AskUsAnything" xml:space="preserve">
+    <value>Ask us anything by mail, phone call or direct message.</value>
+  </data>
+  <data name="CallUs" xml:space="preserve">
+    <value>Call us</value>
+  </data>
+  <data name="Copyrights" xml:space="preserve">
+    <value>Garvan Entertainment. All rights reserved.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailAlreadyRegistered" xml:space="preserve">
+    <value>This e-mail is already registered</value>
+  </data>
+  <data name="EmailSuccessfullyRegistered" xml:space="preserve">
+    <value>Your e-mail was successfully registered.&lt;br/&gt;Stay tuned for more news from Garvan</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error400" xml:space="preserve">
+    <value>Bad request: The request cannot be fulfilled due to bad syntax</value>
+  </data>
+  <data name="Error403" xml:space="preserve">
+    <value>Forbidden</value>
+  </data>
+  <data name="Error404" xml:space="preserve">
+    <value>Oops, this page was not found</value>
+  </data>
+  <data name="Error408" xml:space="preserve">
+    <value>The server timed out waiting for the request</value>
+  </data>
+  <data name="Error500" xml:space="preserve">
+    <value>Internal Server Error - server was unable to finish processing the request</value>
+  </data>
+  <data name="ErrorOccurredTryAgain" xml:space="preserve">
+    <value>Error occurred. Please try again</value>
+  </data>
+  <data name="ErrorOther" xml:space="preserve">
+    <value>That’s odd... Something we didn't expect happened</value>
+  </data>
+  <data name="FollowUs" xml:space="preserve">
+    <value>Follow us</value>
+  </data>
+  <data name="GarvanMail" xml:space="preserve">
+    <value>info@garvanentertainment.com</value>
+  </data>
+  <data name="GarvanPhone" xml:space="preserve">
+    <value>+359 88 732 1987</value>
+  </data>
+  <data name="GarvanPhoneWithoutSpaces" xml:space="preserve">
+    <value>+359887321987</value>
+  </data>
+  <data name="IfYouWantYourNameHere" xml:space="preserve">
+    <value>If you want your name here,</value>
+  </data>
+  <data name="InvalidCaptchaEntered" xml:space="preserve">
+    <value>Invalid captcha entered. Please try again.</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Message sent. We will contact you shortly</value>
+  </data>
+  <data name="MoreDetails" xml:space="preserve">
+    <value>More details</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="NextChapter" xml:space="preserve">
+    <value>Next chapter</value>
+  </data>
+  <data name="PleaseEnterValidEmail" xml:space="preserve">
+    <value>Please enter valid e-mail address</value>
+  </data>
+  <data name="PleaseFillAllFields" xml:space="preserve">
+    <value>Please fill all fields</value>
+  </data>
+  <data name="ReadTheFullStory" xml:space="preserve">
+    <value>Read the full story</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+  <data name="ShopNow" xml:space="preserve">
+    <value>Shop now</value>
+  </data>
+  <data name="SomethingHappenedTryAgain" xml:space="preserve">
+    <value>Something happened. Please try again</value>
+  </data>
+  <data name="Specifications" xml:space="preserve">
+    <value>Specifications</value>
+  </data>
+  <data name="SpecificationsColorLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="SpecificationsColorValue" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="SpecificationsDimensionsLabel" xml:space="preserve">
+    <value>Dimensions</value>
+  </data>
+  <data name="SpecificationsDimensionsValue" xml:space="preserve">
+    <value>1600x675x800 mm (63x26.6x31.5 in) (W x D x H)</value>
+  </data>
+  <data name="SpecificationsExpansionSlotsLabel" xml:space="preserve">
+    <value>Expansion Slots</value>
+  </data>
+  <data name="SpecificationsExpansionSlotsValue" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="SpecificationsFormFactorLabel" xml:space="preserve">
+    <value>Form-Factor</value>
+  </data>
+  <data name="SpecificationsFormFactorValue" xml:space="preserve">
+    <value>Mini-ITX, Micro-ATX, ATX</value>
+  </data>
+  <data name="SpecificationsFrontIOLabel" xml:space="preserve">
+    <value>Front I/O</value>
+  </data>
+  <data name="SpecificationsFrontIOValue" xml:space="preserve">
+    <value>2xUSB3.0, Mic, Headphone, On/Off</value>
+  </data>
+  <data name="SpecificationsMaterialLabel" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="SpecificationsMaterialValue" xml:space="preserve">
+    <value>Metal frame. Anodized aluminum (panel), tempered glass (tabletop)</value>
+  </data>
+  <data name="SpecificationsMaxCpuCoolerHeightLabel" xml:space="preserve">
+    <value>Max. CPU Cooler Height</value>
+  </data>
+  <data name="SpecificationsMaxCpuCoolerHeightValue" xml:space="preserve">
+    <value>180 mm (7.08 in)</value>
+  </data>
+  <data name="SpecificationsMaxGpuLengthLabel" xml:space="preserve">
+    <value>Max. GPU Length</value>
+  </data>
+  <data name="SpecificationsMaxGpuLengthValue" xml:space="preserve">
+    <value>320 mm (12.6 in)</value>
+  </data>
+  <data name="SpecificationsMaxLoadLabel" xml:space="preserve">
+    <value>Max. Load</value>
+  </data>
+  <data name="SpecificationsMaxLoadValue" xml:space="preserve">
+    <value>200 kg (440lb)</value>
+  </data>
+  <data name="SpecificationsPowerSupplyLabel" xml:space="preserve">
+    <value>Power Supply</value>
+  </data>
+  <data name="SpecificationsPowerSupplyValue" xml:space="preserve">
+    <value>Standard ATX</value>
+  </data>
+  <data name="SpecificationsSubHeader" xml:space="preserve">
+    <value>What makes the magic?</value>
+  </data>
+  <data name="SpecificationsWeightLabel" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="SpecificationsWeightValue" xml:space="preserve">
+    <value>approx. 60 kg (132lbs)</value>
+  </data>
+  <data name="StoryChapter1Header" xml:space="preserve">
+    <value>Chapter 1</value>
+  </data>
+  <data name="StoryChapter1Paragraph1" xml:space="preserve">
+    <value>Another day has passed. Her only wish was just to sit and play his favorite game, relaxing from the hard day. However, after an hour, her eyes got heavier and heavier. In one moment, she felt a creepy chill, as if someone is watching her, waiting to make a move.</value>
+  </data>
+  <data name="StoryChapter1Paragraph2" xml:space="preserve">
+    <value>Everything slowly became darker, as she stared into the void a growing shadow got more recognizable. Those sinister eyes paralyzed her until she could not move a muscle, as if something was wrapping her into a deadly cocoon, like a venomous spider preparing to feed on its pray. But it was no spider, may be something far more worse... She was asleep and did not feel anything.</value>
+  </data>
+  <data name="StoryChapter1Paragraph3" xml:space="preserve">
+    <value>His servants were arranged during the day and waited for his victim. The victim was sleeping and they easily conquer her. Every move that she made tided up the grip harder and harder around her body. In the final moment, when she was just about to give up her final breath, a hand reached towards her, as last light of hope.</value>
+  </data>
+  <data name="StoryChapter1Paragraph4" xml:space="preserve">
+    <value>Unknown voice: - RISE UP</value>
+  </data>
+  <data name="StoryChapter1Paragraph5" xml:space="preserve">
+    <value>A strange but also a strong feeling that she can rely on this hand went through her entire body.</value>
+  </data>
+  <data name="StoryChapter1Paragraph6" xml:space="preserve">
+    <value>His reign was threatened.</value>
+  </data>
+  <data name="StoryChapter2Header" xml:space="preserve">
+    <value>Chapter 2 (comming soon...)</value>
+  </data>
+  <data name="StoryChapter2Paragraph1" xml:space="preserve">
+    <value>Another day has passed. Her only wish was just to sit and play his favorite game, relaxing from the hard day. However, after an hour, her eyes got heavier and heavier. In one moment, she felt a creepy chill, as if someone is watching her, waiting to make a move.</value>
+  </data>
+  <data name="StoryChapter2Paragraph2" xml:space="preserve">
+    <value>Everything slowly became darker, as she stared into the void a growing shadow got more recognizable. Those sinister eyes paralyzed her until she could not move a muscle, as if something was wrapping her into a deadly cocoon, like a venomous spider preparing to feed on its pray. But it was no spider, may be something far more worse... She was asleep and did not feel anything.</value>
+  </data>
+  <data name="StoryChapter2Paragraph3" xml:space="preserve">
+    <value>His servants were arranged during the day and waited for his victim. The victim was sleeping and they easily conquer her. Every move that she made tided up the grip harder and harder around her body. In the final moment, when she was just about to give up her final breath, a hand reached towards her, as last light of hope.</value>
+  </data>
+  <data name="StoryChapter2Paragraph4" xml:space="preserve">
+    <value>Unknown voice: - RISE UP</value>
+  </data>
+  <data name="StoryChapter2Paragraph5" xml:space="preserve">
+    <value>A strange but also a strong feeling that she can rely on this hand went through her entire body.</value>
+  </data>
+  <data name="StoryChapter2Paragraph6" xml:space="preserve">
+    <value>His reign was threatened.</value>
+  </data>
+  <data name="StoryChapter3Header" xml:space="preserve">
+    <value>Chapter 3 (comming soon...)</value>
+  </data>
+  <data name="StoryChapter3Paragraph1" xml:space="preserve">
+    <value>Another day has passed. Her only wish was just to sit and play his favorite game, relaxing from the hard day. However, after an hour, her eyes got heavier and heavier. In one moment, she felt a creepy chill, as if someone is watching her, waiting to make a move.</value>
+  </data>
+  <data name="StoryChapter3Paragraph2" xml:space="preserve">
+    <value>Everything slowly became darker, as she stared into the void a growing shadow got more recognizable. Those sinister eyes paralyzed her until she could not move a muscle, as if something was wrapping her into a deadly cocoon, like a venomous spider preparing to feed on its pray. But it was no spider, may be something far more worse... She was asleep and did not feel anything.</value>
+  </data>
+  <data name="StoryChapter3Paragraph3" xml:space="preserve">
+    <value>His servants were arranged during the day and waited for his victim. The victim was sleeping and they easily conquer her. Every move that she made tided up the grip harder and harder around her body. In the final moment, when she was just about to give up her final breath, a hand reached towards her, as last light of hope.</value>
+  </data>
+  <data name="StoryChapter3Paragraph4" xml:space="preserve">
+    <value>Unknown voice: - RISE UP</value>
+  </data>
+  <data name="StoryChapter3Paragraph5" xml:space="preserve">
+    <value>A strange but also a strong feeling that she can rely on this hand went through her entire body.</value>
+  </data>
+  <data name="StoryChapter3Paragraph6" xml:space="preserve">
+    <value>His reign was threatened.</value>
+  </data>
+  <data name="StoryPreludeHeader" xml:space="preserve">
+    <value>The Cable Monster (Prelude)</value>
+  </data>
+  <data name="StoryPreludeParagraph1" xml:space="preserve">
+    <value>A hundred years ago, he was only an idea. A beautiful idea and people believed in him. They used him with no questions and no doubt. In exchange he takes what he wants. As a plague cell, he wants only one thing, to grow and consume space and thus, create a place for its minions.</value>
+  </data>
+  <data name="StoryPreludeParagraph2" xml:space="preserve">
+    <value>That's how he managed to get to the home of each one of them. Sometimes people clean the bodies of a dead minions, but they never faced the real threat. He was smart and deadly.</value>
+  </data>
+  <data name="StoryPreludeParagraph3" xml:space="preserve">
+    <value>Very few manage to resist him.</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="SubscribePlaceholder" xml:space="preserve">
+    <value>Enter your e-mail address...</value>
+  </data>
+  <data name="TheCableMonster" xml:space="preserve">
+    <value>The Cable monster</value>
+  </data>
+  <data name="WriteUs" xml:space="preserve">
+    <value>write us</value>
+  </data>
+  <data name="YourMessage" xml:space="preserve">
+    <value>Your message</value>
+  </data>
+  <data name="NewGenerationGamingDesk" xml:space="preserve">
+    <value>New generation gaming desk</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="Desk" xml:space="preserve">
+    <value>Desk</value>
+  </data>
+  <data name="GarvanDeskDetails" xml:space="preserve">
+    <value>Garvan Desk details</value>
+  </data>
+  <data name="GarvanDeskDetailsInfo" xml:space="preserve">
+    <value>Gaming case-desks and accessories. It‘s your world.</value>
+  </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Send request</value>
+  </data>
+  <data name="TechnicalSpecifications" xml:space="preserve">
+    <value>Technical specifications</value>
+  </data>
+  <data name="TheStory" xml:space="preserve">
+    <value>The story</value>
+  </data>
+  <data name="SpecificationsDriveTraysLabel" xml:space="preserve">
+    <value>Drive trays</value>
+  </data>
+  <data name="SpecificationsDriveTraysValue" xml:space="preserve">
+    <value>2 x 2,5″ (internal) (up to 10)&lt;br/&gt;1 x 3,5″ (internal) (up to 5)</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsLabel" xml:space="preserve">
+    <value>Radiator mountings</value>
+  </data>
+  <data name="SpecificationsRadiatorMountingsValue" xml:space="preserve">
+    <value>1x max. 420x140x 95 mm (left)&lt;br/&gt;1x max. 420x140x 95 mm (back)</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansLabel" xml:space="preserve">
+    <value>Total possible fans</value>
+  </data>
+  <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
+    <value>3 x 140 mm (left)&lt;br/&gt;3 x 140 mm (back)&lt;br/&gt;3 x 140 mm fans included</value>
+  </data>
+</root>

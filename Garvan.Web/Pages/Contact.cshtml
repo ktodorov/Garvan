@@ -1,19 +1,87 @@
 ﻿@page
-@model ContactModel
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = Resources.Contacts;
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@model ContactModel
+<div id="contacts-div" class="centered-div">
+    <h2>@Resources.Contacts</h2>
+    <h4>@Resources.AskUsAnything</h4>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="row">
+        <div class="col-md-6">
+            <form id="garvan-contact-form">
+                <div class="contacts-row">
+                    <div class="row">
+                        <div class="input-wrapper col-md-6 separate-control">
+                            <label for="Name" class="input-label">@Resources.Name:</label>
+                            <input name="Name" type="text" id="name-input" />
+                        </div>
+                        <div class="input-wrapper col-md-6 separate-control">
+                            <label for="Email" class="input-label">@Resources.Email:</label>
+                            <input id="contactEmailInput" name="Email" type="text" id="email-input" />
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-row">
+                    <div class="input-wrapper separate-control">
+                        <label for="Subject" class="input-label">@Resources.Subject:</label>
+                        <input name="Subject" type="text" id="subject-input" />
+                    </div>
+                </div>
+                <div class="contacts-row">
+                    <div class="input-wrapper separate-control">
+                        <label for="Message" class="input-label">@Resources.YourMessage:</label>
+                        <textarea name="Message" id="message-input"></textarea>
+                    </div>
+                </div>
+
+                <div class="contacts-row separate-control">
+                    <div class="g-recaptcha" data-sitekey="6LdEoj4UAAAAALyiKMUTZbfCmWZQuiesiAw2ORCH"></div>
+                </div>
+                <div class="contacts-row separate-control">
+                    <button type="submit" class="garvan-button">@Resources.SendMessage</button>
+                </div>
+            </form>
+
+            @{await Html.RenderPartialAsync("Partials/ErrorMessage");}
+
+            @{await Html.RenderPartialAsync("Partials/InfoMessage");}
+
+            @{await Html.RenderPartialAsync("Partials/LoadingWrapper");}
+        </div>
+        <div id="contacts-info-div" class="col-md-6">
+            <table id="contacts-info-links-table">
+                <tr>
+                    <td class="contacts-info-email-a">
+                        <i class="fa fa-envelope-o"> </i>
+                        @{ 
+                            var mailToLink = $"mailto:{Resources.GarvanMail}";
+                        }
+                        <a href="@mailToLink">
+                            @Resources.GarvanMail
+                        </a>
+                    </td>
+                </tr>
+                @*<tr>
+                    <td class="contacts-info-phone-a">
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:@Resources.GarvanPhoneWithoutSpaces">
+                            @Resources.GarvanPhone
+                        </a>
+                    </td>
+                </tr>*@
+            </table>
+            <div class="row">
+                <img id="contacts-bird-img" src="~/images/pictures/bird_cut_to_legs.png" />
+            </div>
+            <div class="row">
+                <img id="contacts-desk-img" src="~/images/pictures/desk_side.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contacts-subscribe-div">
+    @{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
+</div>

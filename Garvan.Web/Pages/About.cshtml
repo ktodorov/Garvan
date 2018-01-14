@@ -1,9 +1,32 @@
 ﻿@page
 @model AboutModel
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = Resources.AboutUs;
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
+<div id="about-page">
+    <div id="about-div" class="row">
+        <div class="col-md-2"></div>
+        <div id="about-div-wrapper" class="col-md-5">
+            <h1>@Resources.AboutUs</h1>
+            <h3>@Resources.AboutUsSubHeader</h3>
 
-<p>Use this area to provide additional information.</p>
+            <div id="about-info-wrapper">
+                <div id="info-text-wrapper">
+                    @Html.BuildTextWithCapitalizedFirstLetter(Resources.AboutUsInfo)
+                </div>
+
+                <div id="your-world-wrapper">
+                    @Html.Raw(Resources.AboutUsSubInfo)
+                </div>
+
+                @Html.GetShopNowButton()
+            </div>
+
+        </div>
+        <div class="col-md-5">
+            <img id="hand-cable-img" class="align-bottom" src="~/images/pictures/hand_cable.png" />
+        </div>
+    </div>
+
+    @{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
+</div>

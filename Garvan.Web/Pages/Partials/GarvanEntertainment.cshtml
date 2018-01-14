@@ -1,0 +1,23 @@
+﻿@page
+@model Garvan.Web.Pages.Partials.GarvanEntertainmentModel
+
+<div id="garvan-entertainment-div" class="partial-div partial-info-div ">
+    <div class="info-text-div col-md-6">
+        <div>
+            <h2>@Resources.GarvanEntertainment</h2>
+            <p>
+                @Resources.NewGenerationGamingDesk
+            </p>
+
+            @Html.GetShopNowButton()
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="~/images/pictures/desk_top_cut.png" />
+    </div>
+    <img class="shine-img" src="~/images/pictures/shine.png" />
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

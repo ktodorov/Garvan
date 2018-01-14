@@ -1,0 +1,11 @@
+﻿@page
+@model Garvan.Web.Pages.ShopModel
+@{
+    ViewData["Title"] = Resources.Shop;
+}
+
+<h2>Shop</h2>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

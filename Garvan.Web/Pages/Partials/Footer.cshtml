@@ -1,0 +1,41 @@
+﻿<footer>
+    <div class="footer-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>@Resources.Navigate</h4>
+                <ul>
+                    <li><a asp-page="/Index">@Resources.Home</a></li>
+                    <li><a asp-page="/DeskDetails">@Resources.Desk</a></li>
+                    <li><a asp-page="/Story">@Resources.Blog</a></li>
+                    <li><a asp-page="/Contact">@Resources.ContactUs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>@Resources.AboutTheSite</h4>
+                <ul>
+                    <li><a asp-page="/Index">@Resources.TermsAndConditions</a></li>
+                    <li><a asp-page="/Index">@Resources.PrivacyPolicy</a></li>
+                    <li><a asp-page="/Index">@Resources.FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                @*<h4>@Resources.CallUs</h4>
+                <ul>
+                    <li><a href="tel:@Resources.GarvanPhoneWithoutSpaces">@Resources.GarvanPhone</a></li>
+                </ul>*@
+                <h4>@Resources.FollowUs</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/garvanentertainment/" class="fa fa-facebook-square fa-2x"></a>
+                        <a href="https://twitter.com/GarvanEnt/" class="fa fa-twitter fa-2x"></a>
+                        <a href="https://www.instagram.com/garvan_entertainment/" class="fa fa-instagram fa-2x"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="footer-copyrights-wrapper">
+            &copy; @DateTime.Now.Year - @Resources.Copyrights
+        </div>
+    </div>
+</footer>

@@ -1,23 +1,41 @@
 ﻿@page
 @model ErrorModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = Resources.Error;
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+@{
+    if (Model == null)
+    {
+        return;
+    }
 
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
+    var statusmessage = string.Empty;
+    var statusCode = Model.StatusCode;
+    switch (Model.StatusCode)
+    {
+        case 400:
+            statusmessage = Resources.Error400;
+            break;
+        case 403:
+            statusmessage = Resources.Error403;
+            break;
+        case 404:
+            statusmessage = Resources.Error404;
+            break;
+        case 408:
+            statusmessage = Resources.Error408;
+            break;
+        case 500:
+            statusmessage = Resources.Error500;
+            break;
+        default:
+            statusCode = 500;
+            statusmessage = Resources.ErrorOther;
+            break;
+    }
 }
-
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
-</p>
+<div id="error-page-wrapper">
+    <h1>@Resources.Error @statusCode</h1>
+    <h2>@statusmessage</h2>
+</div>

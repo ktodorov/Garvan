@@ -1,0 +1,60 @@
+﻿@page
+@{
+    ViewData["Title"] = Resources.GarvanDeskDetails;
+}
+
+@model Garvan.Web.Pages.DeskDetailsModel
+
+<div id="desk-details-div" class="centered-div row">
+    <div class="col-md-7">
+        <div id="main-image-wrapper">
+            <div style="position: relative; float: left;">
+                <img id="main-image" src="~/images/pictures/desk_top_cut.jpg" />
+                <a id="zoom-image-button"><i class="fa fa-search fa-2x"></i></a>
+            </div>
+        </div>
+        <div id="images-picker">
+            <div class="row">
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/desk_top_cut.jpg" />
+                </div>
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/desk_front.png" />
+                </div>
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/desk_top.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div id="desk-details-overlay-image" style="display: none;"></div>
+        <h1 class="garvan-page-main-header">@Resources.GarvanDeskDetails</h1>
+        <p class="desk-details-info-paragraph">@Resources.GarvanDeskDetailsInfo</p>
+
+        <h3 class="garvan-page-sub-header">@Resources.TechnicalSpecifications:</h3>
+        @{await Html.RenderPartialAsync("Partials/SpecificationsTable", new Pages.Partials.SpecificationsTableModel() { IncludeAllSpecifications = true });}
+
+        <div id="desk-details-button-wrapper">
+            <button id="shop-button" class="garvan-button">@Resources.SendRequest</button>
+            <button class="garvan-button sub-button garvan-story-button">@Resources.TheStory</button>
+        </div>
+    </div>
+</div>
+
+<div id="outer-zoomed-image-wrapper">
+    <span class="close-button">
+        <i class="fa fa-times"></i>
+    </span>
+
+    <img src="~/images/pictures/desk_top_cut.jpg" />
+</div>
+
+@{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
+
+<environment include="Development">
+    <script src="~/js/desk-details.js" asp-append-version="true"></script>
+</environment>
+<environment exclude="Development">
+    <script src="~/js/desk-details.min.js" asp-append-version="true"></script>
+</environment>

@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 namespace Garvan.Web.Pages
 {
     public class ErrorModel : PageModel
     {
-        public string RequestId { get; set; }
+        private readonly ILogger<ErrorModel> _logger;
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        [BindProperty]
+        public int StatusCode { get; set; }
 
-        public void OnGet()
+        public ErrorModel(ILogger<ErrorModel> logger)
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            _logger = logger;
+        }
+
+        public void OnGet(int statusCode)
+        {
+            _logger.LogInformation($"Unexpected Status Code: {statusCode}, OriginalPath: {HttpContext.Items["originalPath"]}");
+            StatusCode = statusCode;
         }
     }
 }

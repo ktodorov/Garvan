@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Garvan.Core\Garvan.Core.csproj" />
+    <ProjectReference Include="..\Garvan.Data.Interfaces\Garvan.Data.Interfaces.csproj" />
     <ProjectReference Include="..\Garvan.Database\Garvan.Database.csproj" />
     <ProjectReference Include="..\Garvan.Entities\Garvan.Entities.csproj" />
   </ItemGroup>
