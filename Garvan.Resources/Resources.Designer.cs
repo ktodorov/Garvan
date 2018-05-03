@@ -349,7 +349,7 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to info@garvanentertainment.com.
+        ///   Looks up a localized string similar to sales@garvanentertainment.com.
         /// </summary>
         public static string GarvanMail {
             get {
