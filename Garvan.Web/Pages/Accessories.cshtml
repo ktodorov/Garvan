@@ -1,0 +1,74 @@
+﻿@page
+@model Garvan.Web.Pages.AccessoriesModel
+@{
+    ViewData["Title"] = Resources.Accessories;
+}
+
+<div id="accessories-div" class="centered-div row">
+    <div class="col-md-7">
+        <div id="main-image-wrapper">
+            <div style="position: relative; float: left;">
+                <img id="main-image" src="~/images/pictures/pad_3.jpg" />
+                <a id="zoom-image-button"><i class="fa fa-search fa-2x"></i></a>
+            </div>
+        </div>
+        <div id="images-picker">
+            <div class="row">
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/pad_1.jpg" />
+                </div>
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/pad_2.jpg" />
+                </div>
+                <div class="image-picker-wrapper col-md-3">
+                    <img src="~/images/pictures/pad_3.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div id="accessories-overlay-image" style="display: none;"></div>
+        <h1 class="garvan-page-main-header">@Resources.GarvanPadXL</h1>
+
+        <h3 class="garvan-page-sub-header">@Resources.TechnicalSpecifications:</h3>
+        <table class="specifications-table">
+            <tr>
+                <th>@Resources.PadDimensionsLabel:</th>
+                <td>@Resources.PadDimensionsValue</td>
+            </tr>
+            <tr>
+                <th>@Resources.PadMaterialLabel:</th>
+                <td>@Resources.PadMaterialValue</td>
+            </tr>
+            <tr>
+                <th>@Resources.PadColorLabel:</th>
+                <td>@Resources.PadColorValue</td>
+            </tr>
+            <tr>
+                <th>@Resources.PadPriceLabel:</th>
+                <td><span class="scratch-diagonal">@Resources.PadPriceValueOld</span> <b>@Resources.PadPriceValueNew</b></td>
+            </tr>
+        </table>
+
+        <div id="accessories-button-wrapper">
+            <button id="shop-button" class="garvan-button">@Resources.SendRequest</button>
+        </div>
+    </div>
+</div>
+
+<div id="outer-zoomed-image-wrapper">
+    <span class="close-button">
+        <i class="fa fa-times"></i>
+    </span>
+
+    <img src="~/images/pictures/desk_top_cut.jpg" />
+</div>
+
+@{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
+
+<environment include="Development">
+    <script src="~/js/accessories.js" asp-append-version="true"></script>
+</environment>
+<environment exclude="Development">
+    <script src="~/js/accessories.min.js" asp-append-version="true"></script>
+</environment>

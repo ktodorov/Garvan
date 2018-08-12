@@ -106,6 +106,24 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Accessories.
+        /// </summary>
+        public static string Accessories {
+            get {
+                return ResourceManager.GetString("Accessories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All shipments to Bulgaria are delivered by Econt with options to pay on delivery and check the product before payment.
+        /// </summary>
+        public static string AllShipmentsToBulgariaContactsInfo {
+            get {
+                return ResourceManager.GetString("AllShipmentsToBulgariaContactsInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to And don&apos;t miss cool new products and special offers.
         /// </summary>
         public static string AndDontMissCoolNewProductsAndSpecialOffers {
@@ -358,6 +376,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Garvan Pad XL.
+        /// </summary>
+        public static string GarvanPadXL {
+            get {
+                return ResourceManager.GetString("GarvanPadXL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to +359 88 732 1987.
         /// </summary>
         public static string GarvanPhone {
@@ -480,6 +507,87 @@ namespace Garvan.Resources {
         public static string OurDistributors {
             get {
                 return ResourceManager.GetString("OurDistributors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color.
+        /// </summary>
+        public static string PadColorLabel {
+            get {
+                return ResourceManager.GetString("PadColorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Black.
+        /// </summary>
+        public static string PadColorValue {
+            get {
+                return ResourceManager.GetString("PadColorValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dimensions.
+        /// </summary>
+        public static string PadDimensionsLabel {
+            get {
+                return ResourceManager.GetString("PadDimensionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 900x300 mm.
+        /// </summary>
+        public static string PadDimensionsValue {
+            get {
+                return ResourceManager.GetString("PadDimensionsValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Material.
+        /// </summary>
+        public static string PadMaterialLabel {
+            get {
+                return ResourceManager.GetString("PadMaterialLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smooth fabric and rubber base.
+        /// </summary>
+        public static string PadMaterialValue {
+            get {
+                return ResourceManager.GetString("PadMaterialValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string PadPriceLabel {
+            get {
+                return ResourceManager.GetString("PadPriceLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 60 BGN.
+        /// </summary>
+        public static string PadPriceValueNew {
+            get {
+                return ResourceManager.GetString("PadPriceValueNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 85 BGN.
+        /// </summary>
+        public static string PadPriceValueOld {
+            get {
+                return ResourceManager.GetString("PadPriceValueOld", resourceCulture);
             }
         }
         

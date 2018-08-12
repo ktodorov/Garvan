@@ -486,4 +486,40 @@
   <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
     <value>3 x 140 mm (left)&lt;br/&gt;3 x 140 mm (back)&lt;br/&gt;3 x 140 mm fans included</value>
   </data>
+  <data name="Accessories" xml:space="preserve">
+    <value>Accessories</value>
+  </data>
+  <data name="AllShipmentsToBulgariaContactsInfo" xml:space="preserve">
+    <value>All shipments to Bulgaria are delivered by Econt with options to pay on delivery and check the product before payment</value>
+  </data>
+  <data name="GarvanPadXL" xml:space="preserve">
+    <value>Garvan Pad XL</value>
+  </data>
+  <data name="PadColorLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="PadColorValue" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="PadDimensionsLabel" xml:space="preserve">
+    <value>Dimensions</value>
+  </data>
+  <data name="PadDimensionsValue" xml:space="preserve">
+    <value>900x300 mm</value>
+  </data>
+  <data name="PadMaterialLabel" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="PadMaterialValue" xml:space="preserve">
+    <value>Smooth fabric and rubber base</value>
+  </data>
+  <data name="PadPriceLabel" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PadPriceValueNew" xml:space="preserve">
+    <value>60 BGN</value>
+  </data>
+  <data name="PadPriceValueOld" xml:space="preserve">
+    <value>85 BGN</value>
+  </data>
 </root>

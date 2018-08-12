@@ -951,6 +951,106 @@ table.specifications-table {
             color: #eee;
         }
 
+
+#accessories-div {
+    margin-bottom: 70px;
+    margin-top: 60px;
+}
+
+    #accessories-div .garvan-page-sub-header {
+        font-weight: bold;
+    }
+
+    #accessories-div .accessories-info-paragraph {
+        font-size: 18px;
+    }
+
+    #accessories-div #accessories-button-wrapper {
+        text-align: center;
+    }
+
+        #accessories-div #accessories-button-wrapper button {
+            margin: 0 7px;
+            margin-top: 30px;
+            width: 170px;
+        }
+
+
+    #accessories-div #main-image-wrapper {
+        position: relative;
+        height: 300px;
+    }
+
+    #accessories-div #main-image {
+        max-width: 100%;
+        max-height: 100%;
+        border: 1px solid #ccc;
+        max-height: 300px;
+    }
+
+        #accessories-div #main-image:hover {
+            cursor: crosshair;
+        }
+
+    #accessories-div #images-picker {
+        padding: 30px 0;
+    }
+
+        #accessories-div #images-picker .image-picker-wrapper {
+            border: 1px solid #ccc;
+            height: 120px;
+            margin: 0 5px;
+        }
+
+            #accessories-div #images-picker .image-picker-wrapper:hover {
+                cursor: pointer;
+                border: 1px solid #aaa;
+            }
+
+            #accessories-div #images-picker .image-picker-wrapper img {
+                width: 100%;
+            }
+
+    #accessories-div #accessories-overlay-image {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+        display: inline-block;
+        background-image: url('../images/pictures/desk_top_cut.jpg');
+        background-repeat: no-repeat;
+    }
+
+    #accessories-div #main-image-wrapper #zoom-image-button {
+        z-index: 2;
+        height: 50px;
+        width: 46px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #39a8a0;
+        border: none;
+        color: white;
+        text-align: center;
+    }
+
+        #accessories-div #main-image-wrapper #zoom-image-button:active {
+            border: none;
+        }
+
+        #accessories-div #main-image-wrapper #zoom-image-button:hover {
+            cursor: pointer;
+        }
+
+        #accessories-div #main-image-wrapper #zoom-image-button i {
+            line-height: 50px;
+        }
+
+
+        #accessories-div #main-image-wrapper #zoom-image-button:hover i {
+            color: #eee;
+        }
+
 #outer-zoomed-image-wrapper {
     display: none;
     position: fixed;
@@ -1009,6 +1109,15 @@ table.specifications-table {
         margin: auto;
         width: 100%;
     }
+
+    #accessories-div #images-picker .image-picker-wrapper img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    }
 }
 
 @media(max-width: 992px) {
@@ -1020,4 +1129,17 @@ table.specifications-table {
     #desk-details-div #main-image-wrapper #zoom-image-button {
         display: none;
     }
+
+    #accessories-div #images-picker .image-picker-wrapper {
+        margin: 5px 0;
+        height: 100%;
+    }
+
+    #accessories-div #main-image-wrapper #zoom-image-button {
+        display: none;
+    }
+}
+
+.scratch-diagonal {
+    background: linear-gradient(to left top, transparent 47.75%, red, red, transparent 52.25%);
 }
