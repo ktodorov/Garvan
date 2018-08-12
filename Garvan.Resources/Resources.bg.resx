@@ -486,4 +486,7 @@
   <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
     <value>3 x 140 мм (ляво)&lt;br/&gt;3 x 140 мм (отзад)&lt;br/&gt;3 x 140 мм вентилатори включени</value>
   </data>
+  <data name="AllShipmentsToBulgariaContactsInfo" xml:space="preserve">
+    <value>Всички доставки до България се изпълняват от Еконт с възможност за наложен платеж и преглед преди плащане</value>
+  </data>
 </root>

@@ -106,6 +106,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All shipments to Bulgaria are delivered by Econt with options to pay on delivery and check the product before payment.
+        /// </summary>
+        public static string AllShipmentsToBulgariaContactsInfo {
+            get {
+                return ResourceManager.GetString("AllShipmentsToBulgariaContactsInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to And don&apos;t miss cool new products and special offers.
         /// </summary>
         public static string AndDontMissCoolNewProductsAndSpecialOffers {

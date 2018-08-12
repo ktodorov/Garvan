@@ -486,4 +486,7 @@
   <data name="SpecificationsTotalPossibleFansValue" xml:space="preserve">
     <value>3 x 140 mm (left)&lt;br/&gt;3 x 140 mm (back)&lt;br/&gt;3 x 140 mm fans included</value>
   </data>
+  <data name="AllShipmentsToBulgariaContactsInfo" xml:space="preserve">
+    <value>All shipments to Bulgaria are delivered by Econt with options to pay on delivery and check the product before payment</value>
+  </data>
 </root>
