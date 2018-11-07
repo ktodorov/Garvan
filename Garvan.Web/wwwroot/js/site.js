@@ -8,7 +8,7 @@
     };
 
     $("#shop-button").click(() => {
-        window.location.href = '/Contact';
+        window.location.href = '/Shop';
     });
 
     $(".garvan-story-button").click(() => {
