@@ -20,7 +20,7 @@ namespace Garvan.Data.Services
             _configuration = configuration;
         }
 
-        public async Task SendEmail(EmailToSend emailToSend)
+        public async Task SendEmailAsync(EmailToSend emailToSend)
         {
             var smtpAddress = _configuration.GetSection("SMTP_Address").Value;
             var smtpUsername = _configuration.GetSection("SMTP_Username").Value;
@@ -45,6 +45,28 @@ namespace Garvan.Data.Services
                     await client.SendMailAsync(mailMessage);
                 }
             }
+        }
+
+        public async Task SendShopEmailAsync(BasketToSend basketToSend)
+        {
+            var emailMessage = new StringBuilder(basketToSend.Message);
+
+            emailMessage.AppendLine();
+
+            foreach (var shopObject in basketToSend.ShopObjects)
+            {
+                emailMessage.AppendLine(shopObject.ToString());
+            }
+
+            var emailToSend = new EmailToSend
+            {
+                Email = basketToSend.Email,
+                Name = basketToSend.Name,
+                Subject = basketToSend.Subject,
+                Message = emailMessage.ToString()
+            };
+
+            await SendEmailAsync(emailToSend);
         }
     }
 }

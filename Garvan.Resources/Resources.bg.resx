@@ -495,4 +495,34 @@
   <data name="GarvanPadXL" xml:space="preserve">
     <value>Гарван Пад XL</value>
   </data>
+  <data name="Count" xml:space="preserve">
+    <value>Брой</value>
+  </data>
+  <data name="Object" xml:space="preserve">
+    <value>Обект</value>
+  </data>
+  <data name="YouSave" xml:space="preserve">
+    <value>Спестяваш</value>
+  </data>
+  <data name="PricePerUnit" xml:space="preserve">
+    <value>Цена за един брой</value>
+  </data>
+  <data name="PadPriceValueNew" xml:space="preserve">
+    <value>64.99 лв.</value>
+  </data>
+  <data name="PadPriceValueOld" xml:space="preserve">
+    <value>118.99 лв.</value>
+  </data>
+  <data name="PadPriceValueDifference" xml:space="preserve">
+    <value>54.99 лв.</value>
+  </data>
+  <data name="AllProducts" xml:space="preserve">
+    <value>Всички продукти</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Общо</value>
+  </data>
+  <data name="PleaseEnterValidCount" xml:space="preserve">
+    <value>Моля въведете валиден брой</value>
+  </data>
 </root>

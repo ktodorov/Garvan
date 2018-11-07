@@ -13,13 +13,13 @@ using Newtonsoft.Json.Linq;
 
 namespace Garvan.Web.Controllers
 {
-    public class ContactController : Controller
+    public class ShopController : Controller
     {
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
 
-        public ContactController(IMapper mapper, IEmailService emailService, IConfiguration configuration)
+        public ShopController(IMapper mapper, IEmailService emailService, IConfiguration configuration)
         {
             _mapper = mapper;
             _emailService = emailService;
@@ -27,15 +27,14 @@ namespace Garvan.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendEmail(EmailToSendDto emailToSendDto)
+        public async Task<IActionResult> SendBasketEmail([FromBody] BasketToSendDto basketToSendDto)
         {
             if (!ModelState.IsValid)
             {
                 return Json(new { success = false, responseText = Resources.Resources.PleaseFillAllFields });
             }
 
-            var response = Request.Form["g-recaptcha-response"];
-            if (!response.Any(r => !string.IsNullOrEmpty(r)))
+            if (string.IsNullOrWhiteSpace(basketToSendDto.RecaptchaResponse))
             {
                 return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
@@ -47,7 +46,7 @@ namespace Garvan.Web.Controllers
             }
 
             var client = new WebClient();
-            var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response));
+            var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, basketToSendDto.RecaptchaResponse));
             var obj = JObject.Parse(result);
             var status = (bool)obj.SelectToken("success");
 
@@ -56,8 +55,8 @@ namespace Garvan.Web.Controllers
                 return Json(new { success = false, responseText = Resources.Resources.InvalidCaptchaEntered });
             }
 
-            var emailToSend = _mapper.Map<EmailToSend>(emailToSendDto);
-            await _emailService.SendEmailAsync(emailToSend);
+            var basketToSend = _mapper.Map<BasketToSend>(basketToSendDto);
+            await _emailService.SendShopEmailAsync(basketToSend);
             return Json(new { success = true, responseText = Resources.Resources.MessageSent });
         }
     }

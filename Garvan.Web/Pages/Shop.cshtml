@@ -1,11 +1,150 @@
 ﻿@page
-@model Garvan.Web.Pages.ShopModel
 @{
     ViewData["Title"] = Resources.Shop;
 }
 
-<h2>Shop</h2>
+@model ContactModel
+<div id="shop-div" class="centered-div">
+    <h2>@Resources.Shop</h2>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <form id="garvan-shop-form">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4>@Resources.AllShipmentsToBulgariaContactsInfo</h4>
+
+
+                <div class="basket-outer-div">
+                    <div class="row">
+                        <div class="shop-item-header col-md-6">
+                            @Resources.GarvanPadXL
+                        </div>
+                    </div>
+                    <div class="basket-inner-div row">
+                        <div class="col-md-6">
+                            <div id="main-image-wrapper">
+                                <div style="position: relative; float: left;">
+                                    <img id="main-image" src="~/images/pictures/pad_3.jpg" />
+                                    <a id="zoom-image-button"><i class="fa fa-search fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 shop-object-count">
+                            <label for="count" class="input-label">@Resources.Count:</label>
+                            <input name="count" type="number" min="1" id="shopCountInput" />
+                        </div>
+                        <div class="col-md-2 shop-object-price">
+                            <div name="price" class="shop-object-price-current">@Resources.PadPriceValueNew </div>
+                            <div class="shop-object-price-old">@Resources.PadPriceValueOld</div>
+                            <div class="shop-object-price-save-label">@Resources.YouSave:</div>
+                            <div class="shop-object-price-difference">@Resources.PadPriceValueDifference</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8"></div>
+                        <div class="col-md-4 shop-basket-price">
+                            <div class="">
+                                <div class="col-md-7 shop-basket-price-all-label">
+                                    @Resources.AllProducts:
+                                </div>
+                                <div class="col-md-5 shop-basket-price-all-value">
+                                    @Resources.PadPriceValueNew
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-7 shop-basket-price-total-label">
+                                    @Resources.Total:
+                                </div>
+                                <div class="col-md-5 shop-basket-price-total-value">
+                                    @Resources.PadPriceValueNew
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="shop-row">
+                    <div class="row">
+                        <div class="input-wrapper col-md-6 separate-control">
+                            <label for="name" class="input-label">@Resources.Name:</label>
+                            <input name="name" type="text" id="name-input" />
+                        </div>
+                        <div class="input-wrapper col-md-6 separate-control">
+                            <label for="email" class="input-label">@Resources.Email:</label>
+                            <input id="shopEmailInput" name="email" type="text" id="email-input" />
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-row">
+                    <div class="input-wrapper separate-control">
+                        <label for="subject" class="input-label">@Resources.Subject:</label>
+                        <input name="subject" type="text" id="subject-input" />
+                    </div>
+                </div>
+                <div class="shop-row">
+                    <div class="input-wrapper separate-control">
+                        <label for="message" class="input-label">@Resources.YourMessage:</label>
+                        <textarea name="message" id="message-input"></textarea>
+                    </div>
+                </div>
+
+                <div class="shop-row separate-control">
+                    <div class="g-recaptcha" data-sitekey="6LdEoj4UAAAAALyiKMUTZbfCmWZQuiesiAw2ORCH"></div>
+                </div>
+                <div class="shop-row separate-control">
+                    <button type="submit" class="garvan-button">@Resources.SendMessage</button>
+                </div>
+
+
+                @{await Html.RenderPartialAsync("Partials/ErrorMessage");}
+
+                @{await Html.RenderPartialAsync("Partials/InfoMessage");}
+
+                @{await Html.RenderPartialAsync("Partials/LoadingWrapper");}
+            </div>
+            <div id="shop-info-div" class="col-md-6">
+                <table id="shop-info-links-table">
+                    <tr>
+                        <td class="shop-info-email-a">
+                            <i class="fa fa-envelope-o"> </i>
+                            @{
+                                var mailToLink = $"mailto:{Resources.GarvanMail}";
+                            }
+                            <a href="@mailToLink">
+                                @Resources.GarvanMail
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <img id="shop-bird-img" src="~/images/pictures/bird_cut_to_legs.png" />
+                </div>
+                <div class="row">
+                    <img id="shop-desk-img" src="~/images/pictures/desk_side.png" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="shop-subscribe-div">
+    @{await Html.RenderPartialAsync("Partials/Subscribe", new Garvan.Web.Pages.Partials.SubscribePartialModel());}
+</div>
+
+<div id="outer-zoomed-image-wrapper">
+    <span class="close-button">
+        <i class="fa fa-times"></i>
+    </span>
+
+    <img src="~/images/pictures/pad_3.jpg" />
+</div>
+
+<environment include="Development">
+    <script src="~/js/accessories.js" asp-append-version="true"></script>
+</environment>
+<environment exclude="Development">
+    <script src="~/js/accessories.min.js" asp-append-version="true"></script>
+</environment>

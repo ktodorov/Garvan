@@ -15,12 +15,15 @@ namespace Garvan.Web.Models
 
         public string EmailSuccessfullyRegistered { get; set; }
 
+        public string EnterValidCount{ get; set; }
+
         public SubscribeResourcesModel()
         {
             SomethingHappened = Resources.Resources.SomethingHappenedTryAgain;
             EnterValidEmail = Resources.Resources.PleaseEnterValidEmail;
             ErrorOccurred = Resources.Resources.ErrorOccurredTryAgain;
             EmailSuccessfullyRegistered = Resources.Resources.EmailSuccessfullyRegistered;
+            EnterValidCount = Resources.Resources.PleaseEnterValidCount;
         }
     }
 }

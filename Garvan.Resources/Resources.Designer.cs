@@ -115,6 +115,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All products.
+        /// </summary>
+        public static string AllProducts {
+            get {
+                return ResourceManager.GetString("AllProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All shipments to Bulgaria are delivered by Econt with options to pay on delivery and check the product before payment.
         /// </summary>
         public static string AllShipmentsToBulgariaContactsInfo {
@@ -183,6 +192,15 @@ namespace Garvan.Resources {
         public static string Copyrights {
             get {
                 return ResourceManager.GetString("Copyrights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count.
+        /// </summary>
+        public static string Count {
+            get {
+                return ResourceManager.GetString("Count", resourceCulture);
             }
         }
         
@@ -502,6 +520,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Object.
+        /// </summary>
+        public static string Object {
+            get {
+                return ResourceManager.GetString("Object", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Our distributors.
         /// </summary>
         public static string OurDistributors {
@@ -574,7 +601,16 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 60 BGN.
+        ///   Looks up a localized string similar to 54.99 BGN.
+        /// </summary>
+        public static string PadPriceValueDifference {
+            get {
+                return ResourceManager.GetString("PadPriceValueDifference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 64.99 BGN.
         /// </summary>
         public static string PadPriceValueNew {
             get {
@@ -583,11 +619,20 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 85 BGN.
+        ///   Looks up a localized string similar to 118.99 BGN.
         /// </summary>
         public static string PadPriceValueOld {
             get {
                 return ResourceManager.GetString("PadPriceValueOld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter valid count.
+        /// </summary>
+        public static string PleaseEnterValidCount {
+            get {
+                return ResourceManager.GetString("PleaseEnterValidCount", resourceCulture);
             }
         }
         
@@ -606,6 +651,15 @@ namespace Garvan.Resources {
         public static string PleaseFillAllFields {
             get {
                 return ResourceManager.GetString("PleaseFillAllFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price per unit.
+        /// </summary>
+        public static string PricePerUnit {
+            get {
+                return ResourceManager.GetString("PricePerUnit", resourceCulture);
             }
         }
         
@@ -1249,6 +1303,15 @@ namespace Garvan.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Twitter.
         /// </summary>
         public static string Twitter {
@@ -1272,6 +1335,15 @@ namespace Garvan.Resources {
         public static string YourMessage {
             get {
                 return ResourceManager.GetString("YourMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You save.
+        /// </summary>
+        public static string YouSave {
+            get {
+                return ResourceManager.GetString("YouSave", resourceCulture);
             }
         }
     }

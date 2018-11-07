@@ -52,7 +52,7 @@ namespace Garvan.Web.Pages
             }
 
             var emailToSend = _mapper.Map<EmailToSend>(EmailToSendDto);
-            await _emailService.SendEmail(emailToSend);
+            await _emailService.SendEmailAsync(emailToSend);
             return;// StatusCode(200);
         }
     }

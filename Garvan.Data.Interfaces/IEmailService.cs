@@ -8,6 +8,8 @@ namespace Garvan.Data.Interfaces
 {
     public interface IEmailService
     {
-        Task SendEmail(EmailToSend emailToSend);
+        Task SendEmailAsync(EmailToSend emailToSend);
+
+        Task SendShopEmailAsync(BasketToSend basketToSend);
     }
 }
