@@ -517,9 +517,33 @@
     <value>Price</value>
   </data>
   <data name="PadPriceValueNew" xml:space="preserve">
-    <value>60 BGN</value>
+    <value>64.99 BGN</value>
   </data>
   <data name="PadPriceValueOld" xml:space="preserve">
-    <value>85 BGN</value>
+    <value>118.99 BGN</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Object" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="YouSave" xml:space="preserve">
+    <value>You save</value>
+  </data>
+  <data name="PricePerUnit" xml:space="preserve">
+    <value>Price per unit</value>
+  </data>
+  <data name="PadPriceValueDifference" xml:space="preserve">
+    <value>54.99 BGN</value>
+  </data>
+  <data name="AllProducts" xml:space="preserve">
+    <value>All products</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="PleaseEnterValidCount" xml:space="preserve">
+    <value>Please enter valid count</value>
   </data>
 </root>

@@ -3,7 +3,8 @@
         SomethingHappened: "",
         EnterValidEmail: "",
         ErrorOccurred: "",
-        EmailSuccessfullyRegistered: ""
+        EmailSuccessfullyRegistered: "",
+        EnterValidCount: ""
     };
 
     $("#shop-button").click(() => {
@@ -137,7 +138,6 @@
                 return;
             }
 
-            var serializedData = JSON.stringify($form.serialize());
             //form encoded data
             var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
             var data = $form.serialize();
@@ -167,6 +167,86 @@
         });
     });
 
+    $("#garvan-shop-form").submit(function (event) {
+        event.preventDefault();
+        var $form = $(this);
+
+        loadResources(() => {
+            var $formParent = $form.closest("div");
+            var emailEntered = $form.find("#shopEmailInput").val();
+            if (!emailEntered || !isEmail(emailEntered)) {
+                displayErrorMessage($formParent, resources.EnterValidEmail);
+                return;
+            }
+
+            var countEntered = $form.find("#shopCountInput").val();
+            if (!countEntered) {
+                displayErrorMessage($formParent, resources.EnterValidCount);
+                return;
+            }
+
+            var countNumber = parseInt(countEntered, 10);
+            if (countNumber < 0) {
+                displayErrorMessage($formParent, resources.EnterValidCount);
+                return;
+            }
+
+            var itemName = $form.find(".shop-item-header").text().trim();
+            var itemPrice = parseInt($form.find(".shop-object-price-current").text().trim());
+
+            var dataType = 'application/json';
+            var serializedFormData = getFormData($form);
+
+            var formData = {
+                name: serializedFormData['name'],
+                email: serializedFormData['email'],
+                shopObjects: [{
+                    count: countNumber,
+                    name: itemName,
+                    price: itemPrice
+                }],
+                subject: serializedFormData['subject'],
+                message: serializedFormData['message'],
+                'recaptcha-response': serializedFormData['g-recaptcha-response']
+            };
+
+            disableContactForm($form, true);
+
+            var $loadingWrapper = $formParent.find(".loading-wrapper");
+            $loadingWrapper.removeClass("hidden");
+
+            $.ajax({
+                url: 'Shop/SendBasketEmail',
+                type: 'POST',
+                contentType: dataType,
+                dataType: 'json',
+                data: JSON.stringify(formData),
+            })
+                .done(function (response) {
+                    if (response != null && response.success) {
+                        displayInfoMessage($formParent, response.responseText);
+                        clearContactForm($form);
+                    } else {
+                        displayErrorMessage($formParent, response.responseText);
+                    }
+
+                    disableContactForm($form, false);
+                    $loadingWrapper.addClass("hidden");
+                });
+        });
+    });
+
+    function getFormData($form) {
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function (n, i) {
+            indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+    }
+
     function disableContactForm($contactForm, isEnabled) {
         $contactForm.find("input").prop("disabled", isEnabled);
         $contactForm.find("textarea").prop("disabled", isEnabled);
@@ -192,6 +272,7 @@
             .success(function (response) {
                 resources.SomethingHappened = response.somethingHappened;
                 resources.EnterValidEmail = response.enterValidEmail;
+                resources.EnterValidCount = response.enterValidCount;
                 resources.ErrorOccurred = response.errorOccurred;
                 resources.EmailSuccessfullyRegistered = response.emailSuccessfullyRegistered;
 
